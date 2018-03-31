@@ -26,7 +26,6 @@ class User {
 		/**@type {?Game} */
 		this.game = null;
 	}
-
 	/**
 	 * @param {Room | string} room
 	 * @param {string} targetRank
@@ -34,12 +33,15 @@ class User {
 	 */
 	hasRank(room, targetRank) {
 		if (!Config.groups) return false;
+
 		let rank;
 		if (typeof room === 'string') {
 			rank = room;
 		} else {
 			rank = this.rooms.get(room);
+			if (this.isDeveloper()) return true;
 		}
+
 		if (!rank) return false;
 		return Config.groups[rank] >= Config.groups[targetRank];
 	}
