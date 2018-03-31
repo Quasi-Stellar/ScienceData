@@ -8,9 +8,8 @@
  */
 
 'use strict';
-
-// The username and password that Cassius will use to login
-exports.username = 'Example Username';
+// The username and password that ScienceData will use to login
+exports.username = 'ScienceData';
 // leave this blank if the username is unregistered
 exports.password = '';
 
@@ -18,26 +17,27 @@ exports.password = '';
 exports.server = '';
 
 // The avatar that Cassius will use
-exports.avatar = '';
+exports.avatar = '120';
 
 // A guide for commands and features
-exports.guide = '';
+exports.guide = 'For help with ScienceData, please PM Aurolux.';
 
-// Rooms that Cassius will attempt to join after logging in
+// Rooms that ScienceData will attempt to join after logging in
 // example: exports.rooms = ['room1', 'room2', 'room3'];
 /**@type {Array<string>} */
-exports.rooms = [];
+exports.rooms = [''];
 
 // Rooms where scripted games are enabled
 /**@type {Array<string>} */
-exports.games = [];
+exports.games = [''];
 
 // Rooms where scripted tournaments are enabled
 /**@type {Array<string>} */
-exports.tournaments = [];
+exports.tournaments = ['groupchat-umbraaura-science'];
 
 // The default cap to use for scripted tournaments
 exports.defaultTournamentCap = 0;
+
 
 // The character that determines which messages are read as commands
 exports.commandCharacter = '.';
@@ -63,7 +63,7 @@ exports.bannedWords = [];
 // Userids of those who have debug access to Cassius
 // example: exports.developers = ['devuser1', 'devuser2', 'devuser3'];
 /**@type {Array<string>} */
-exports.developers = [];
+exports.developers = ['aurolux'];
 
 // Custom functions
 /**@type {?Function} */
