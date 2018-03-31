@@ -32,6 +32,14 @@ let commands = {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("ScienceData's code: https://github.com/sirDonovan/Cassius");
 	},
+		let inviteUsers = ["assassin534", "Crashley", "autiway", "saplingarcher", "AQrow", "cc", "chaospirex", "Greengate", "happy413", "spiderz", "yiy1156", "aurom", "zorq", "kceeee", "hubriz", "lemurman", "hydrostatics", "quartia", "sakanosilvally", "teramelos", "coolgamer564", "kaijubunny", "bryantn", "themeh", "darkraiswrath", "deathpony2", "marsyop", "obx", "thelvl100", "mystifi", "archfeywild", "andromedagalaxy", "bassbeats", "floette", "silverscrapes", "sapphire707", "sneakysharky", "giratinaawakens", "ahumanbeing", "notdeci"," melagon", "jrniceguy", "GefdeMongoose", "ultrainstict8cell", "thewritingsquib", "sucymanvabaren", "freelia", "sirjakrispy", "piaa", "boreasaquilo", "wuhoodude", "senpaikitty27", "secondcite", "dangerouswomen", "hiofeh", "1punbabe", "thimblebony", "primaldialga002", "mariontogedemaru", "neovanilluxe", "eshohero", "tingyi", "xynix", "destroyertito", "decidueyezankuro", "pawndering", "meattack", "NeverwinterKc", "shucklethenerd", "micin", "raidx", "moonlitraptor", "deltaiguana", "ameena", "xnadrojx", "derpydumbmudkip", "lasercircus", "daisyoodle", "geoffbruedly", "betadog"];
+	this.say("Inviting ``" + inviteUsers.length + "`` confirmed users.");
+	for (let curUser of inviteUsers) {
+        this.say("/invite ${curUser}");
+}
+	this.say("All users have been invited.");
+	},
+
 	
 	invites: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
