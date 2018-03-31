@@ -7,8 +7,6 @@
  * @license MIT license
  */
 
-'use strict';
-
 // Users who use the settour command when a tournament is already
 // scheduled will be added here and prompted to reuse the command.
 // This prevents accidentally overwriting a scheduled tournament.
@@ -30,10 +28,42 @@ let commands = {
 	},
 
 	// General commands
-	about: function (target, room, user) {
+	git: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say(Config.username + " code by sirDonovan: https://github.com/sirDonovan/Cassius");
+		this.say("ScienceData's code: https://github.com/sirDonovan/Cassius");
 	},
+	
+	invites: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		this.say("ScienceData is inviting a total of ``73`` confirmed users."); this.say("/invite cc"); this.say("/invite assassin534"); this.say("/invite saplingarcher"); this.say("/invite AQrow"); this.say("/invite Crashley"); this.say("/invite autiway"); this.say("/invite chaospirex"); this.say("/invite Greengate"); this.say("/invite happy413");this.say("/invite spiderz");this.say("/invite Yiy1156"); this.say("/invite Kceeee");this.say("/invite zorq"); this.say("/invite Hubriz"); this.say("/invite aurom"); this.say("/invite Lemurman"); this.say("/invite hydrostatics"); this.say("/invite Quartia"); this.say("/invite sakanosilvally"); this.say("/invite tera melos"); this.say("/invite coolgamer564");this.say("/invite kaijubunny");this.say("/invite bryantn");this.say("/invite themeh"); this.say("/invite andromeda galaxy"); this.say("/invite bassbeats");this.say("/invite floette");this.say("/invite silverscrapes");this.say("/invite sapphire707");this.say("/invite sneakysharky"); this.say("/invite giratinaawakens"); this.say("/invite ahumanbeing"); this.say("/invite notdeci"); this.say("/invite melagon");this.say("/invite jrniceguy");this.say("/invite Thylacine Tourist"); this.say("/invite ultrainstinct8cell"); this.say("/invite thewritingsquib"); this.say("/invite sucymanvabaran");this.say("/invite freelia"); this.say("/invite sirjakrispy");this.say("/invite piaa");this.say("/invite wuhoodude"); this.say("/invite senpaikitty27"); this.say("/invite secondcite"); this.say("/invite dangerouswomen"); this.say("/invite boreasaquilo"); this.say ("/invite aquiloboreas"); this.say("/invite hiofeh"); this.say("/invite 1pubbabe");this.say ("/invite thimblebony");this.say ("/invite primaldialga002"); this.say("/invite marlontogedemaru"); this.say("/invite Sentimentality"); this.say("/invite thermostat"); this.say("/invite neovanilluxe"); this.say("/invite eshohero");this.say("/invite eshohero");this.say("/invite tingyi");this.say("/invite xynix");this.say("/invite Decidueye(Zankuro)");this.say("/invite skylordtito");this.say("/invite Moonlit Raptor");this.say("/invite deltaiguana");this.say("/invite pawndering");this.say("/invite meattack");this.say("/invite NeverwinterKc");this.say("/invite shucklethenerd"); this.say("/invite micin");this.say("/invite 96k");this.say("/invite raidx");this.say("/invite ameena");this.say("/invite XnadrojX");this.say("/invite derpydumbmudkip"); this.say("A total of ``73`` confirmed users have been sent invitations.");
+	},
+	setup: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		this.say("/forceroomvoice crashley"); this.say("/forceroomvoice umbraaura"); this.say("Aurolux dont forget these promotes: @- cc, assassin534 %- Greengate, SaplingArcher");
+	},
+	autobans: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		this.say("/rb pokemonpokerpoke"); 
+	},
+	kill: 'logout',
+	kill: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '@')) return;
+		this.say("/logout")
+	},
+	roast: function (target, user, room) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		let roasts = ("If i wanted to die, I would climb to the top of " + target + "'s ego and jump to their IQ", target + ", I was going to give you a nasty look but I see that you’ve already got one.", target + ", you always bring me so much joy. As soon as you leave the room.", target + ", some day you'll go far - and i really hope you stay there.", "To call " + target + " a donkey would be an insult to the donkey.", target + ", You're the reason the gene pool needs a lifeguard", target + "'s breath is so bad, their dentist treats them over the phone.", "I tried making " + target + " my password but my computer said it was too weak.", "If laughter is the best medicine, " + target + "'s face must be curing the world.", target + ", you remind me of Kurt Angle. You suck!", target + ', your presence here is as bad as __OM Room__\'s theme', target + ", you remind me of gold. You weigh a fuck ton.", target + ", your body looks like a kindergartners attempt to make a person out of playdoh", target + ", my mom asked me to take out the trash so what time should I pick you up?", "No, those __pants__ don't make " + target + " look fatter - how could they?", "If " + target + " is gonna be two-faced, why can't at least one of them be attractive?", "Accidents happen. LIKE YOU!", target + " is proof god has a sense of humor");
+		this.say(room, Tools.sample(roasts));
+	},
+	school: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		this.say("Please bring all school concerns to <<scholastic>>.");
+	},
+	confirmed: function (target, room, users) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		this.say("The userlist are the people who will be invited to the chat by the bot when a new chat is made. In order to sign up, PM Aurolux.");
+	},
+
 	help: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		if (!Config.guide) return this.say("There is no guide available.");
@@ -55,13 +85,13 @@ let commands = {
 			for (let i = 0, len = database.mail[to].length; i < len; i++) {
 				if (Tools.toId(database.mail[to][i].from) === user.id) queued++;
 			}
-			if (queued >= 3) return this.say("You have too many messages queued for " + Users.add(targets[0]).name + ".");
+			if (queued >= 3) return this.say("You have too many messages queued for " + targets[0] + ".");
 		} else {
 			database.mail[to] = [];
 		}
 		database.mail[to].push({time: Date.now(), from: user.name, text: message});
 		Storage.exportDatabase('global');
-		this.say("Your message has been sent to " + Users.add(targets[0]).name + "!");
+		this.say("Your message has been sent to " + targets[0] + "!");
 	},
 
 	// Game commands
@@ -122,8 +152,44 @@ let commands = {
 		if (!points.length) return this.say((target ? target.trim() + " does not" : "You do not") + " have points on any leaderboard.");
 		this.say(points.join(" | "));
 	},
-
-	// Tournament commands
+			//Activity Poll
+	activity: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		this.say("/poll end");
+		this.say("/poll create Chose a preferred activity., Tournament, Hangman, Hemingway, What's That Myth, Other (PM your idea)");
+		this.say("/poll timer 5")
+	},
+			//Settings
+	modchat: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		if (target === 'off') return this.say("/modchat off");
+		if (target === 'ac') return this.say("/modchat ac");
+		if (target === 'ac') return this.say("/modchat ac");
+		if (target === 'voice') return this.say("/modchat +");
+		if (target === '+') return this.say("/modchat +");
+		if (target === 'trusted') return this.say("/modchat trusted");
+		if (!target) return this.say("ERROR: Not enough arguements. For help use ``.modchat help``");
+		if (target === 'help') return this.say("To turn modchat to preferred rank use ``.modchat [field]``");
+	},
+	voicechat: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		this.say("/modchat +")
+	},
+	modchatoff: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		this.say("/modchat off")
+	},
+			// UNO commands
+	uno: function (target, room, user) {
+			if (target === 'end')  return	this.say('/uno end')
+			if (target === 'start') return this.say('/uno start');
+			if (!target) return this.say('/uno create');
+},
+	unohelp: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		this.say("To create: ``.uno`` To start: ``.startuno`` To end: ``.enduno``")
+	},
+			// Tournament commands
 	tour: 'tournament',
 	tournament: function (target, room, user) {
 		if (room instanceof Users.User || !Config.tournaments || !Config.tournaments.includes(room.id)) return;
@@ -206,5 +272,6 @@ let commands = {
 		this.say("The scheduled tournament was canceled.");
 	},
 };
+
 
 module.exports = commands;
