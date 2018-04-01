@@ -49,13 +49,12 @@ let commands = {
 	},
 	requestconfirmation: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, ' ')) return;
-		 this.say("Staff: A user requests to be added to the bot invited userlist.");
+		 this.say("Staff: __" + target + "__ requests to be added to the bot invited userlist.");
 	},
 	confirm: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
-		 this.say("Staff has confirmed this user");
+		 this.say("Staff has confirmed __" + target +"__");
 	},
-
 	confirmed: function (target, room, users) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("The userlist are the people who will be invited to the chat by the bot when a new chat is made. In order to sign up, PM Aurolux.");
