@@ -30,12 +30,12 @@ let commands = {
 	// General commands
 	git: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("ScienceData's code: https://github.com/sirDonovan/Cassius");
+		this.say("ScienceData's code: https://github.com/Aurolux/Science-Data");
 	},
 	inviteusers: function (target, room, user){ 
                   if (!user.hasRank(room, '%')) return false;                 
 
-	let inviteUsers = ["pacificnarwhal", "assassin534", "Crashley", "autiway", "saplingarcher", "AQrow", "cc", "chaospirex", "Greengate", "happy413", "spiderz", "yiy1156", "aurom", "zorq", "kceeee", "hubriz", "lemurman", "hydrostatics", "quartia", "sakanosilvally", "teramelos", "coolgamer564", "kaijubunny", "bryantn", "themeh", "darkraiswrath", "deathpony2", "marsyop", "obx", "thelvl100", "mystifi", "archfeywild", "andromedagalaxy", "bassbeats", "floette", "silverscrapes", "sapphire707", "sneakysharky", "giratinaawakens", "ahumanbeing", "notdeci"," melagon", "jrniceguy", "GefdeMongoose", "ultrainstict8cell", "thewritingsquib", "sucymanvabaren", "freelia", "sirjakrispy", "piaa", "boreasaquilo", "wuhoodude", "senpaikitty27", "secondcite", "dangerouswomen", "hiofeh", "1punbabe", "thimblebony", "primaldialga002", "marlontogedemaru", "neovanilluxe", "eshohero", "tingyi", "xynix", "destroyertito", "decidueyezankuro", "pawndering", "meattack", "NeverwinterKc", "shucklethenerd", "micin", "raidx", "moonlitraptor", "deltaiguana", "ameena", "xnadrojx", "derpydumbmudkip", "lasercircus", "daisyoodle", "betadog", "ladychatnoir", "thermostat", "StyliXhAlishba","krossfade", "fugupineapple", "lilcheetoz", "Sentimentality", "warrdd", "pokeschooler1123", "foxyy", "catlover3", "raichuoflugnica",];
+	let inviteUsers = ["assassin534", "Crashley", "Queenauti", "saplingarcher", "AQrow", "cc", "chaospirex", "Greengate", "happy413", "spiderz", "yiy1156", "aurom", "zorq", "kceeee", "hubriz", "lemurman", "hydrostatics", "quartia", "sakanosilvally", "teramelos", "coolgamer564", "bryantn", "themeh", "TemporalDarkrai", "deathpony2", "hikaritan", "obx", "mystifi", "archfeywild", "andromedagalaxy", "bassbeats", "floette", "silverscrapes", "sapphire707", "sneakysharky", "giratinaawakens", "ahumanbeing", "notdeci"," melagon", "jrniceguy", "GefdeMongoose", "ultrainstict8cell", "thewritingsquib", "sucymanvabaren", "freelia", "sirjakrispy", "piaa", "boreasaquilo", "wuhoodude", "senpaikitty27", "secondcite", "dangerouswomen", "hiofeh", "1punbabe", "thimblebony", "primaldialga002", "marlontogedemaru", "neovanilluxe", "eshohero", "tingyi", "xynix", "destroyertito", "decidueyezankuro", "pawndering", "meattack", "NeverwinterKc", "shucklethenerd", "micin", "raidx", "moonlitraptor", "deltaiguana", "ameena", "xnadrojx", "derpydumbmudkip", "lasercircus", "daisyoodle", "betadog", "SpartacistKitten", "thermostat", "StyliXhAlishba","krossfade", "fugupineapple", "lilcheetoz", "Sentimentality", "warrdd", "pokeschooler1123", "foxyy", "catlover3", "raichuoflugnica","mystic1", "exene", "SquattedKumlifts", "tsunderebolt", "torterraman456", "charmanderisaliv", "MarijuanaJesus", "dEaDmOoNdAvE","Nebotus", "brian 335", "StyliXh Queen", "FerrousLupus", "Badnecklace", "Tatsuke(Infernape)", "AmonGothitelle", "UnearthlyPotato", "Host Joe", "SparkyHeliolisk", "GoldtheRadtrainer", "rygly", "Nosferatuuu", "alkius", "CommandorTurtwig", "NoivernBlast", "SmolGrill", "Indigophoenix", "TheBerryMaster", "MBC1215", "cz", "flareonblitz", "MightyRisingAce", "soccer", "Magicana79", "SpicyJake"];
             this.say("Inviting ``" + inviteUsers.length + "`` confirmed users.");
             for (let curUser of inviteUsers) {
                          this.say("/invite " + curUser);
@@ -52,12 +52,11 @@ let commands = {
 		 this.say("Staff: __" + target + "__ requests to be added to the bot invited userlist.");
 	},
 	confirm: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
-		 this.say("Staff has confirmed __" + target +"__");
-	},
-	confirmed: function (target, room, users) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("The userlist are the people who will be invited to the chat by the bot when a new chat is made. In order to sign up, PM Aurolux.");
+		 this.say("Staff has confirmed __" + target +"__");
+	if (!target) return this.say("Please provide a username to confirm");
+	if (target === help) return this.say("If you would like to be added to the bot-invited userlist, please use the command ``.requestconfirmation [your username]``.");
+	
 	},
 	autobans: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
@@ -79,18 +78,31 @@ let commands = {
 	},
 	roast: function (target, user, room) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		let roasts = ("If i wanted to die, I would climb to the top of " + target + "'s ego and jump to their IQ", target + ", I was going to give you a nasty look but I see that you’ve already got one.", target + ", you always bring me so much joy. As soon as you leave the room.", target + ", some day you'll go far - and i really hope you stay there.", "To call " + target + " a donkey would be an insult to the donkey.", target + ", You're the reason the gene pool needs a lifeguard", target + "'s breath is so bad, their dentist treats them over the phone.", "I tried making " + target + " my password but my computer said it was too weak.", "If laughter is the best medicine, " + target + "'s face must be curing the world.", target + ", you remind me of Kurt Angle. You suck!", target + ', your presence here is as bad as __OM Room__\'s theme', target + ", you remind me of gold. You weigh a fuck ton.", target + ", your body looks like a kindergartners attempt to make a person out of playdoh", target + ", my mom asked me to take out the trash so what time should I pick you up?", "No, those __pants__ don't make " + target + " look fatter - how could they?", "If " + target + " is gonna be two-faced, why can't at least one of them be attractive?", "Accidents happen. LIKE YOU!", target + " is proof god has a sense of humor");
-		this.say(room, Tools.sample(roasts));
+		let roasts = ["If i wanted to die, I would climb to the top of " + target + "'s ego and jump to their IQ", target + ", I was going to give you a nasty look but I see that you’ve already got one.", target + ", you always bring me so much joy. As soon as you leave the room.", target + ", some day you'll go far - and i really hope you stay there.", "To call " + target + " a donkey would be an insult to the donkey.", target + ", You're the reason the gene pool needs a lifeguard", target + "'s breath is so bad, their dentist treats them over the phone.", "I tried making " + target + " my password but my computer said it was too weak.", "If laughter is the best medicine, " + target + "'s face must be curing the world.", target + ", you remind me of Kurt Angle. You suck!", target + ', your presence here is as bad as __OM Room__\'s theme', target + ", you remind me of gold. You weigh a fuck ton.", target + ", your body looks like a kindergartners attempt to make a person out of playdoh", target + ", my mom asked me to take out the trash so what time should I pick you up?", "No, those __pants__ don't make " + target + " look fatter - how could they?", "If " + target + " is gonna be two-faced, why can't at least one of them be attractive?", "Accidents happen. LIKE YOU!", target + " is proof god has a sense of humor"];
+		this.say(Tools.sampleOne(roasts));
 	},
 	school: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("Please bring all school concerns to <<scholastic>>.");
 	},
-	contest: function (target, room, user) {
+	hangman: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("/wall Science is having its first Spring Contest! https://scienceps.weebly.com/2018-spring-contest.html Is the link with the full description and guidelines");
+		this.say("Please bring all school concerns to <<scholastic>>.");
+	},
+	warn: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		this.say("/mute " + target);
+		this.say("/unmute " + target);
 	},
 
+	contest: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		this.say("/wall The Science Spring Contest is taking a picture of a living organism and writing an analysis on it! For more information, go here: https://scienceps.weebly.com/2018-spring-contest.html");
+	},
+	discord: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
+		this.say("/wall Come check out our discord here: https://discord.gg/uwFVPfU:");
+	},
 	help: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		if (!Config.guide) return this.say("There is no guide available.");
