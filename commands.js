@@ -32,17 +32,6 @@ let commands = {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("ScienceData's code: https://github.com/Aurolux/Science-Data");
 	},
-	inviteusers: function (target, room, user){ 
-                  if (!user.hasRank(room, '%')) return false;                 
-
-	let inviteUsers = ["assassin534", "Crashley", "Queenauti", "saplingarcher", "AQrow", "cc", "chaospirex", "Greengate", "happy413", "spiderz", "yiy1156", "aurom", "zorq", "kceeee", "hubriz", "lemurman", "hydrostatics", "quartia", "sakanosilvally", "teramelos", "coolgamer564", "bryantn", "themeh", "TemporalDarkrai", "deathpony2", "hikaritan", "obx", "mystifi", "archfeywild", "andromedagalaxy", "bassbeats", "floette", "silverscrapes", "sapphire707", "sneakysharky", "giratinaawakens", "ahumanbeing", "notdeci"," melagon", "jrniceguy", "GefdeMongoose", "ultrainstict8cell", "thewritingsquib", "sucymanvabaren", "freelia", "sirjakrispy", "piaa", "boreasaquilo", "wuhoodude", "senpaikitty27", "secondcite", "dangerouswomen", "hiofeh", "1punbabe", "thimblebony", "primaldialga002", "marlontogedemaru", "neovanilluxe", "eshohero", "tingyi", "xynix", "destroyertito", "decidueyezankuro", "pawndering", "meattack", "NeverwinterKc", "shucklethenerd", "micin", "raidx", "moonlitraptor", "deltaiguana", "ameena", "xnadrojx", "derpydumbmudkip", "lasercircus", "daisyoodle", "betadog", "SpartacistKitten", "thermostat", "StyliXhAlishba","krossfade", "fugupineapple", "lilcheetoz", "Sentimentality", "warrdd", "pokeschooler1123", "foxyy", "catlover3", "raichuoflugnica","mystic1", "exene", "SquattedKumlifts", "tsunderebolt", "torterraman456", "charmanderisaliv", "MarijuanaJesus", "dEaDmOoNdAvE","Nebotus", "brian 335", "StyliXh Queen", "FerrousLupus", "Badnecklace", "Tatsuke(Infernape)", "AmonGothitelle", "UnearthlyPotato", "Host Joe", "SparkyHeliolisk", "GoldtheRadtrainer", "rygly", "Nosferatuuu", "alkius", "CommandorTurtwig", "NoivernBlast", "SmolGrill", "Indigophoenix", "TheBerryMaster", "MBC1215", "cz", "flareonblitz", "MightyRisingAce", "soccer", "Magicana79", "SpicyJake"];
-            this.say("Inviting ``" + inviteUsers.length + "`` confirmed users.");
-            for (let curUser of inviteUsers) {
-                         this.say("/invite " + curUser);
-                 }
-            this.say("All users have been invited.");
-},	
-
 	setup: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("/forceroomvoice crashley"); this.say("/forceroomvoice umbraaura"); this.say("Aurolux dont forget these promotes: @- cc, assassin534 %- Greengate, SaplingArcher");
