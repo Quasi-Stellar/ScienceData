@@ -247,6 +247,81 @@ let commands = {
 			Tools.uploadToHastebin('Messages:\n\n' + output.join('\n'), /**@param {string} link*/ link => this.say("/msg " + user.name + ", Messages Log: " + link));
 		}
 	},
+	// Returns the history of the day for mythology room
+	'scientist': 'sotd',
+	sotd: function (target, room, user) {
+		let text = room instanceof Users.User || user.hasRank(room, '+') ? '' : '/pm ' + user.name + ', ';
+		if (!target) {
+			if (!database.sotd) return this.say(text + "No Scientist of the Day has been set.");
+
+			const html = `<div style="background: url(&quot;https://i.imgur.com/EQh19sO.png&quot;) center ; margin: -2px -4px ; box-shadow: inset 0 0 50px rgba(0 , 0 , 0 , 0.15);">\
+				<div style="font-family: Georgia, serif ; max-width: 550px ; margin: auto ; padding: 8px 8px 12px 8px; text-align: left; background: rgba(250, 250, 250, 0.8)">\
+					<span style="display: block ; font-family: Verdana, Geneva, sans-serif ; font-size: 16pt ; font-weight: bold ; background: #6d6d6d ; padding: 3px 0 ; text-align: center ; border-radius: 2px ; color: rgba(255 , 255 , 255 , 1) ; margin-bottom: 2px">\
+						<i class="fa fa-book"></i> History of the Day <i class="fa fa-university"></i>\
+					</span>\
+					<span style="font-size: 22pt ; display: inline-block; color: black">${database.hotd.title}</span>\
+					<span style="font-family: Verdana, Geneva, sans-serif ; font-size: 12pt ; display: block ; color: rgba(0, 0, 0 , 0.7) ; letter-spacing: 0px">\
+					${database.hotd.date} - <strong style="letter-spacing: 0">${database.hotd.location}</strong>\
+					</span>\
+					<span style="font-size: 10pt ; font-family: Verdana, Geneva, sans-serif; margin-top: 5px ; display: block ; color: rgba(0, 0, 0 , 0.8)">\
+						${database.hotd.description}\
+					</span>\
+				</div>\
+			</div>`;
+			if (!(room instanceof Users.User) && user.hasRank(room, '+')) {
+				return this.sayHtml(html);
+			} else {
+				// The below is a hacky way to get pminfobox to work within PM. It defaults to Writing since AxeBot/The Scribe is always * in that room. For personal bots, this should be changed to any room that you can guarentee the bot has at least * permissions.
+				if (!(room instanceof Users.User) && Users.self.rooms.get(room) === '*') {
+					return this.pmHtml(user, html);
+				} else {
+					return this.say(text + "Today's History of the Day is **" + database.hotd.title + "**:" + "__" + database.hotd.date + "__" + " - " + database.hotd.location + database.hotd.description);
+				}
+			}
+		}
+		let hasPerms = false;
+
+		if (!(room instanceof Users.User) && user.hasRank(room, '+')) {
+			hasPerms = true;
+		}
+
+		if (!hasPerms && database.scribeShop) {
+			for (let i = 0; i < database.scribeShop.length; i++) {
+				if (database.scribeShop[i].account === user.id) {
+					if (database.scribeShop[i].wotd !== 0) {
+						database.scribeShop[i].wotd -= 1;
+						hasPerms = true;
+						this.say("Redeeming your Poetic License... Uses remaining: " + database.scribeShop[i].wotd + "!");
+					}
+				}
+			}
+		}
+
+		if (!hasPerms) return this.say(text + 'You must be at least Voice or higher to set the History of the Day.');
+		let [title, date, location, ...rest] = target.split(',');
+
+		if (!title || !date || !location || !rest.length) return this.say(text + "Invalid arguments specified. The format is: __title__, __date__, __location__, __description__.");
+
+		title = title.trim();
+		date = date.trim();
+		location = location.trim();
+		const desc = rest.join(',').trim();
+
+		let hotd = {
+			title: title,
+			date: date,
+			location: location,
+			description: desc,
+		};
+		if (!database.hotdHistory) {
+			database.hotdHistory = [];
+		}
+		database.hotd = hotd;
+		database.hotdHistory.push(hotd);
+		Storage.exportDatabase('writing');
+		this.say(`/modnote The History of the Day was set to '${title}' by ${user.name}.`);
+		this.say(`${text}The History of the Day has been set to '${title}'!`);
+	},
 	//Used to blacklist people that frequently abuse the mail system from the mail system.
 	//Thankfully, this hasn't been used as of the time of writing this.
 	upl: 'messageblacklist',
