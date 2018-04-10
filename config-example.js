@@ -13,14 +13,14 @@ exports.username = 'ScienceData';
 // leave this blank if the username is unregistered
 exports.password = '';
 
-// The server address to which Cassius will connect
+// The server address to which ScienceData will connect
 exports.server = '';
 
-// The avatar that Cassius will use
+// The avatar that ScienceData will use
 exports.avatar = '120';
 
 // A guide for commands and features
-exports.guide = 'For help with ScienceData, please PM Aurolux.';
+exports.guide = 'https://github.com/Aurolux/Science-Data/blob/master/README.md';
 
 // Rooms that ScienceData will attempt to join after logging in
 // example: exports.rooms = ['room1', 'room2', 'room3'];
@@ -33,7 +33,7 @@ exports.games = [''];
 
 // Rooms where scripted tournaments are enabled
 /**@type {Array<string>} */
-exports.tournaments = ['groupchat-umbraaura-science'];
+exports.tournaments = [''];
 
 // The default cap to use for scripted tournaments
 exports.defaultTournamentCap = 0;
@@ -60,10 +60,10 @@ exports.groups = {
 /**@type {Array<string>} */
 exports.bannedWords = [];
 
-// Userids of those who have debug access to Cassius
+// Userids of those who have debug access to ScienceData
 // example: exports.developers = ['devuser1', 'devuser2', 'devuser3'];
 /**@type {Array<string>} */
-exports.developers = ['aurolux'];
+exports.developers = [''];
 
 // Custom functions
 /**@type {?Function} */
@@ -90,7 +90,7 @@ for (let i in punishmentPoints) {
 exports.punishmentPoints = punishmentPoints;
 exports.punishmentActions = punishmentActions;
 
-// Reasons used when Cassius punishes a user for
+// Reasons used when ScienceData punishes a user for
 // flooding, stretching, caps, etc.
 // example: punishmentReasons = {'flooding': 'please do not flood the chat'}
 
