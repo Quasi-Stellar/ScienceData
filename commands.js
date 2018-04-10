@@ -52,28 +52,6 @@ let commands = {
 		this.say("/hidetext " + target);
 		this.say("/unmute " + target);
 	},
-		timer: function (target, room, user) {
-		if (!user.canUseBasicCommands(room) || room === user) return;
-		target = Tools.toId(target);
-		if (room.timer) {
-			if (target === 'end' || target === 'stop') {
-				clearTimeout(room.timer);
-				room.timer = null;
-				return room.say("The timer has been ended.");
-			} else {
-				return room.say("There is already a timer running in this room.");
-			}
-		}
-
-		let time = parseFloat(target);
-		if (!time || time > 600) return room.say("The timer must be between 11 seconds and 10 minutes.");
-		if (time < 11) time *= 60;
-		let minutes = Math.floor(time / 60);
-		let seconds = time % 60;
-		room.timer = setTimeout(() => room.sayTimeUp(), time * 1000);
-		room.say("Timer set for " + (minutes > 0 ? ((minutes) + " minute" + (minutes > 1 ? "s" : "")) + (seconds > 0 ? " and " : "") : "") + (seconds > 0 ? ((seconds) + " second" + (seconds > 1 ? "s" : "")) : "") + ".");
-	},
-
 	contest: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("The Science Spring Contest is taking a picture of a living organism and writing an analysis on it! For more information, go here: https://scienceps.weebly.com/2018-spring-contest.html");
