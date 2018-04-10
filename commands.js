@@ -32,38 +32,10 @@ let commands = {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("ScienceData's code: https://github.com/Aurolux/Science-Data");
 	},
-	setup: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("/forceroomvoice crashley"); this.say("/forceroomvoice umbraaura"); this.say("Aurolux dont forget these promotes: @- cc, assassin534 %- Greengate, SaplingArcher");
-	},
-	requestconfirmation: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, ' ')) return;
-		 this.say("Staff: __" + target + "__ requests to be added to the bot invited userlist.");
-	},
-	confirm: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		 this.say("Staff has confirmed __" + target +"__");
-	if (!target) return this.say("Please provide a username to confirm");
-	if (target === help) return this.say("If you would like to be added to the bot-invited userlist, please use the command ``.requestconfirmation [your username]``.");
-	
-	},
-	autobans: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("/rb pokemonpokerpoke"); 
-	},
 	kill: 'logout',
 	kill: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '@')) return;
 		this.say("/logout")
-	},
-	// selecting a random array item
-	todaysfruit: function (target, room, user){ 
-                  if (!user.hasRank(room, '%')) return false;  
-	var selectFruit = ["Apple", "Orange", "Banana", "Cherry"];
-	var pickAFruit = function () {
-	var todaysFruit = selectFruit[Math.floor(Math.random() * 4)];
-	return todaysFruit;
-	};
 	},
 	roast: function (target, user, room) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
@@ -88,11 +60,6 @@ let commands = {
 	discord: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("Come check out our discord here: https://discord.gg/uwFVPfU:");
-	},
-	help: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		if (!Config.guide) return this.say("There is no guide available.");
-		this.say(Users.self.name + " guide: " + Config.guide);
 	},
 	mail: function (target, room, user) {
 		if (!(room instanceof Users.User) || !Config.allowMail) return;
@@ -177,13 +144,6 @@ let commands = {
 		if (!points.length) return this.say((target ? target.trim() + " does not" : "You do not") + " have points on any leaderboard.");
 		this.say(points.join(" | "));
 	},
-			//Activity Poll
-	activity: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
-		this.say("/poll end");
-		this.say("/poll create Chose a preferred activity., Tournament, Hangman, Hemingway, What's That Myth, Other (PM your idea)");
-		this.say("/poll timer 5")
-	},
 			//Settings
 	modchat: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
@@ -195,24 +155,6 @@ let commands = {
 		if (target === 'trusted') return this.say("/modchat trusted");
 		if (!target) return this.say("ERROR: Not enough arguements. For help use ``.modchat help``");
 		if (target === 'help') return this.say("To turn modchat to preferred rank use ``.modchat [field]``");
-	},
-	voicechat: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
-		this.say("/modchat +")
-	},
-	modchatoff: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
-		this.say("/modchat off")
-	},
-			// UNO commands
-	uno: function (target, room, user) {
-			if (target === 'end')  return	this.say('/uno end')
-			if (target === 'start') return this.say('/uno start');
-			if (!target) return this.say('/uno create');
-},
-	unohelp: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("To create: ``.uno`` To start: ``.startuno`` To end: ``.enduno``")
 	},
 			// Tournament commands
 	tour: 'tournament',
