@@ -11,4 +11,9 @@
 ## General Commands
 ### Mod and Above
 `.kill` - logs the bot out
-### Staff
+### Driver and Above
+`.warn` - Mutes, hides text, and unmutes. use `.warn user, (reason)` to use this command
+### Voice and Above
+`.disord` - links to discord
+`.contest` - links information to ongoing contest
+
