@@ -74,23 +74,20 @@ let commands = {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("Please bring all school concerns to <<scholastic>>.");
 	},
-	hangman: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("Please bring all school concerns to <<scholastic>>.");
-	},
 	warn: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
 		this.say("/mute " + target);
+		this.say("/hidetext " + target);
 		this.say("/unmute " + target);
 	},
 
 	contest: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("/wall The Science Spring Contest is taking a picture of a living organism and writing an analysis on it! For more information, go here: https://scienceps.weebly.com/2018-spring-contest.html");
+		this.say("The Science Spring Contest is taking a picture of a living organism and writing an analysis on it! For more information, go here: https://scienceps.weebly.com/2018-spring-contest.html");
 	},
 	discord: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("/wall Come check out our discord here: https://discord.gg/uwFVPfU:");
+		this.say("Come check out our discord here: https://discord.gg/uwFVPfU:");
 	},
 	help: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
