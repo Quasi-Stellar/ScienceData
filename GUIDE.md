@@ -8,12 +8,22 @@
 `.hangmanrank` - shows which users can control hangman
 ### RO Only
 `.sethangmanrank` - sets which rank can use hangman
+## Tournament Commands - Driver (%) or above
+`.tour [tier]` - creates a tournament of a preferred tier.
+`.tour` - gives stats on an ongoing tournament
+`.tour start` - starts a previously created tour
+`.tour end` - ends a previously stared OR created tour
 ## General Commands
 ### Mod and Above
 `.kill` - logs the bot out
 ### Driver and Above
-`.warn` - Mutes, hides text, and unmutes. use `.warn user, (reason)` to use this command
+`.warn` - mutes, hides text, and unmutes. Use `.warn user, (reason)` to use this command
+`.roast` - joke command. Use `.roast user` to roast others. This should NOT be spammed.
+`.modchat` - changes the modchat to the preferred setting. Choices are `.modchat +` `.modchat off` and `.modchat trusted`
 ### Voice and Above
 `.disord` - links to discord
 `.contest` - links information to ongoing contest
+`.school` - states that this room doesn't help with school work
+`.git` - links to this repository
+`.help` - links to this guide
 
