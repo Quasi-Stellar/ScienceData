@@ -263,18 +263,18 @@ let commands = {
 				if (!(room instanceof Users.User) && Users.self.rooms.get(room) === '*') {
 					return this.pmHtml(user, boxpm);
 				} else {
-					return this.say(text + "Today's History of the Day is **" + database.sotd.title + "**:" + "__" + database.sotd.lifetime + "__" + " - " + database.sotd.profession) + database.sotd.description;
+					return this.say(text + "Today's Scientist of the Day is **" + database.sotd.title + "**:" + "__" + database.sotd.lifetime + "__" + " - " + database.sotd.profession) + database.sotd.description;
 				}
 			}
 		}
 		if (Tools.toId(target) === 'check' || Tools.toId(target) === 'time') {
-			if (!database.sotd) return this.say(text + "There is no History of the Day to check!");
-			return this.say(text + "The History of the Day was last updated to **" + database.sotd.title + "** " + Tools.toDurationString(Date.now() - database.sotd.time) + " ago by " + database.sotd.user);
+			if (!database.sotd) return this.say(text + "There is no Scientist of the Day to check!");
+			return this.say(text + "The Scientist of the Day was last updated to **" + database.sotd.title + "** " + Tools.toDurationString(Date.now() - database.sotd.time) + " ago by " + database.sotd.user);
 		}
 		let targets = target.split(', ');
 		let typo = false;
 		if (targets[0] === "typo") {
-			if (!database.sotd) return this.say(text + "There is no History of the Day to correct!");
+			if (!database.sotd) return this.say(text + "There is no Scientist of the Day to correct!");
 			if ((room instanceof Users.User || !user.hasRank(room, '%')) && user.name !== database.sotd.user) return this.say(text + "Sorry, you must be the original user or driver and above to make typo corrections.");
 			typo = true;
 			targets.shift();
