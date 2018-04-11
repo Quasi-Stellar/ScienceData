@@ -24,7 +24,7 @@ for (let i in Tools.data.elements) {
 
 // if inheriting from or inherited by another game, this class would be declared as:
 // let Trivia = base => class extends base {
-class Trivia extends Games.Game {
+let Trivia = base => class extends base {
 	/**
 	 * @param {Room} room
 	 */
@@ -75,7 +75,7 @@ class Trivia extends Games.Game {
 
 exports.name = name;
 exports.id = Tools.toId(name);
-exports.description = "Players guess answers based on the given descriptions!";
+exports.description = "Do you know the periodic table? ``.g [element]`` to find out!";
 exports.commands = {
 	// command: game function
 	// alias: command
