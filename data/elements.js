@@ -2,93 +2,123 @@
 
 exports.ChemicalElements = {
         "hydrogen": {
-                    desc: "Symbol: H | Atomic Number: 1."
+                desc: "Symbol: H | Atomic Number: 1.",
+                name: "hydrogen"
               },
         "helium": {
-                    desc: "Symbol: He | Atomic Number: 2"
+                desc: "Symbol: He | Atomic Number: 2",
+                name: "helium"
               },
          "lithium": {
-                    desc: "Symbol: Li | Atomic Number: 3"
+                 desc: "Symbol: Li | Atomic Number: 3",
+                 name: "lithium"
               },
-         "berylium": {
-                    desc: "Symbol: Be | Atomic Number: 4"
+         "berylium": {   
+                 desc: "Symbol: Be | Atomic Number: 4",
+                 name: "berylium"
               },
          "boron": {
-                    desc: "Symbol: B | Atomic Number: 5"
+                 name: "boron",   
+                 desc: "Symbol: B | Atomic Number: 5"
               },
          "carbon": {
-                    desc: "Symbol: C | Atomic Number: 6"
+                 name: "carbon",   
+                 desc: "Symbol: C | Atomic Number: 6"
               },
-         "nitrogen": {
-                    desc: "Symbol: N | Atomic Number: 7"
+         "nitrogen": {  
+                 name: "nitrogen",   
+                 desc: "Symbol: N | Atomic Number: 7"
               },
          "oxygen": {
-                    desc: "Symbol: O | Atomic Number: 8"
+                 name: "oxygen",   
+                 desc: "Symbol: O | Atomic Number: 8"
               },
          "fluorine": {
-                    desc: "Symbol: F | Atomic Number: 9"
+                 name: "fluorine",
+                 desc: "Symbol: F | Atomic Number: 9"
               },
          "neon": {
-                    desc: "Symbol: Ne | Atomic Number: 10"
+                 name: "neon",   
+                 desc: "Symbol: Ne | Atomic Number: 10"
               },
          "sodium": {
-                    desc: "Symbol: Na | Atomic Number: 11"
+                 name: "sodium",   
+                 desc: "Symbol: Na | Atomic Number: 11"
               },
          "magnesium": {
-                    desc: "Symbol: Mg | Atomic Number: 12"
+                 name: "magnesium",   
+                 desc: "Symbol: Mg | Atomic Number: 12"
               },
          "aluminum": {
-                    desc: "Symbol: Al | Atomic Number: 13"
+                 name: "aluminum",   
+                 desc: "Symbol: Al | Atomic Number: 13"
               },
          "silicon": {
-                    desc: "Symbol: Si | Atomic Number: 14"
+                 name: "silicon",   
+                 desc: "Symbol: Si | Atomic Number: 14"
               }, 
          "phosphorus": {
-                    desc: "Symbol: P | Atomic Number: 15"
+                 name: "phosphorus",   
+                 desc: "Symbol: P | Atomic Number: 15"
               },
          "sulfur": {
-                    desc: "Symbol: S | Atomic Number: 16"
+                 name: "sulfur",   
+                 desc: "Symbol: S | Atomic Number: 16"
               },
          "chlorine": {
-                    desc: "Symbol: Cl | Atomic Number: 17"
+                 name: "chlorine",   
+                 desc: "Symbol: Cl | Atomic Number: 17"
               },
          "argon": {
-                    desc: "Symbol: Ar | Atomic Number: 18"
+                 name: "argon",   
+                 desc: "Symbol: Ar | Atomic Number: 18"
               },
          "potassium": {
-                    desc: "Symbol: K | Atomic Number: 19"
+                 name: "potassium",   
+                 desc: "Symbol: K | Atomic Number: 19"
               },
          "calcium": {
-                    desc: "Symbol: Ca | Atomic Number: 20"
+                 name: "calcium",   
+                 desc: "Symbol: Ca | Atomic Number: 20"
               },
          "scandium": {
-                    desc: "Symbol: Sc | Atomic Number: 21"
+                 name: "scandium",   
+                 desc: "Symbol: Sc | Atomic Number: 21"
               },
          "titanium": {
-                    desc: "Symbol: Ti | Atomic Number: 22"
+                 name: "titanium",   
+                 desc: "Symbol: Ti | Atomic Number: 22"
               },
          "vanadium": {
-                    desc: "Symbol: V | Atomic Number: 23"
+                 name: "vandium",   
+                 desc: "Symbol: V | Atomic Number: 23"
               },
          "chromium": {
-                    desc: "Symbol: Cr | Atomic Number: 24"
+                 name: "chromium",   
+                 desc: "Symbol: Cr | Atomic Number: 24"
               },
          "manganese": {
-                    desc: "Symbol: Mn | Atomic Number: 25"
+                 name: "manganese",   
+                 desc: "Symbol: Mn | Atomic Number: 25"
               },
          "iron": {
-                    desc: "Symbol: Fe | Atomic Number: 26"
+                 name: "iron",   
+                 desc: "Symbol: Fe | Atomic Number: 26"
               },
          "cobalt": {
-                    desc: "Symbol: Co | Atomic Number: 27"
+                 name: "cobalt",   
+                 desc: "Symbol: Co | Atomic Number: 27"
               },
          "nickel": {
-                    desc: "Symbol: Ni | Atomic Number: 28"
+                 name: "nickel",   
+                 desc: "Symbol: Ni | Atomic Number: 28"
               },
          "copper": {
-                    desc: "Symbol: Cu | Atomic Number: 29"
+                 name: "copper",   
+                 desc: "Symbol: Cu | Atomic Number: 29"
               },
          "zinc": {
-              desc: "Symbol: Zn | Atomic Number: 30"
+                 name: "zinc",
+                 desc: "Symbol: Zn | Atomic Number: 30"
               },
 };
