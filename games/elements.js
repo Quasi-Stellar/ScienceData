@@ -94,7 +94,7 @@ exports.variations = [
 exports.modes = ["Survival", "Team"];
 // if inheriting from or inherited by another game, this game would be exported as:
 // exports.install = Trivia;
-exports.install = Elements;
+exports.install = Trivia;
 
 /**
  * @param {Trivia} game
@@ -107,7 +107,7 @@ exports.spawnMochaTests = function (game) {
 
 	let tests = {
 		/**
-		 * @param {Trivia} game
+		 * @param {Elements} game
 		 */
 		'guess': game => {
 			game.signups();
