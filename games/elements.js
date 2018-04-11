@@ -6,13 +6,8 @@
  */
 
 'use strict';
-
-const name = "Elements";
-
-const data = {
-	"Elements": {},
-};
-
+const name = "elements";
+const elements = Storage.getDatabase('elements');
 for (let i in Tools.data.elements) {
 	let element = Tools.getExistingElement(i);
 	if (!element.name) continue;
@@ -82,7 +77,7 @@ exports.commands = {
 	"guess": "guess",
 	"g": "guess",
 };
-exports.aliases = ['triv'];
+exports.aliases = ['elements'];
 exports.variations = [
 	{
 		name: "Element Trivia",
