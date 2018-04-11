@@ -10,10 +10,10 @@
 'use strict';
 // The username and password that ScienceData will use to login
 exports.username = 'ScienceData';
-// leave this blank if the username is unregistered
+// if the username is unregistered, this process will most likely not work, so please provide a password to a registerd user
 exports.password = '';
 
-// The server address to which ScienceData will connect
+// The server address to which ScienceData will connect. Leave this empty to connect to the PS main server.
 exports.server = '';
 
 // The avatar that ScienceData will use
@@ -72,7 +72,7 @@ exports.parseMessage = null;
 exports.moderate = null;
 
 /**@type {boolean | {[k: string]: boolean}} */
-exports.allowModeration = false;
+exports.allowModeration = true;
 
 let punishmentPoints = {
 	'verbalwarn': 0,
@@ -97,4 +97,4 @@ exports.punishmentActions = punishmentActions;
 /**@type {?{[k: string]: string}} */
 exports.punishmentReasons = null;
 
-exports.allowMail = false;
+exports.allowMail = true;
