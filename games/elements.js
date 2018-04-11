@@ -15,31 +15,13 @@ const data = {
 	"Pokemon Abilities": {},
 };
 
-for (let i in Tools.data.moves) {
-	let move = Tools.getExistingMove(i);
-	if (!move.name) continue;
-	let desc = move.desc || move.shortDesc;
+for (let i in Tools.data.elements) {
+	let element = Tools.getExistingElement(i);
+	if (!element.name) continue;
+	let desc = element.desc || element.shortDesc;
 	if (!desc) continue;
-	if (!(desc in data["Pokemon Moves"])) data["Pokemon Moves"][desc] = [];
-	data["Pokemon Moves"][desc].push(move.name);
-}
-
-for (let i in Tools.data.items) {
-	let item = Tools.getExistingItem(i);
-	if (!item.name) continue;
-	let desc = item.desc || item.shortDesc;
-	if (!desc) continue;
-	if (!(desc in data["Pokemon Items"])) data["Pokemon Items"][desc] = [];
-	data["Pokemon Items"][desc].push(item.name);
-}
-
-for (let i in Tools.data.abilities) {
-	let ability = Tools.getExistingAbility(i);
-	if (!ability.name) continue;
-	let desc = ability.desc || ability.shortDesc;
-	if (!desc) continue;
-	if (!(desc in data["Pokemon Abilities"])) data["Pokemon Abilities"][desc] = [];
-	data["Pokemon Abilities"][desc].push(ability.name);
+	if (!(desc in data["Elements"])) data["Elements"][desc] = [];
+	data["Elements"][desc].push(element.name);
 }
 
 // if inheriting from or inherited by another game, this class would be declared as:
@@ -105,28 +87,16 @@ exports.commands = {
 exports.aliases = ['triv'];
 exports.variations = [
 	{
-		name: "Move Trivia",
-		aliases: ['Moves Trivia'],
-		variation: "Pokemon Moves",
-		variationAliases: ['moves'],
-	},
-	{
-		name: "Item Trivia",
-		aliases: ['Items Trivia'],
-		variation: "Pokemon Items",
-		variationAliases: ['items'],
-	},
-	{
-		name: "Ability Trivia",
-		aliases: ['Abilities Trivia'],
-		variation: "Pokemon Abilities",
-		variationAliases: ['abilities'],
+		name: "Element Trivia",
+		aliases: ['Elements'],
+		variation: "Periodic Elements",
+		variationAliases: ['elements'],
 	},
 ];
 exports.modes = ["Survival", "Team"];
 // if inheriting from or inherited by another game, this game would be exported as:
 // exports.install = Trivia;
-exports.install = Elements;
+exports.install = Trivia;
 
 /**
  * @param {Trivia} game
