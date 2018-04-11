@@ -85,8 +85,8 @@ exports.commands = {
 exports.aliases = ['triv'];
 exports.variations = [
 	{
-		name: "Elements",
-		aliases: ['Element Trivia'],
+		name: "Element Trivia",
+		aliases: ['Periodic Table'],
 		variation: "Periodic Elements",
 		variationAliases: ['elements'],
 	},
