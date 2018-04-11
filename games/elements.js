@@ -10,9 +10,7 @@
 const name = "Elements";
 
 const data = {
-	"Pokemon Moves": {},
-	"Pokemon Items": {},
-	"Pokemon Abilities": {},
+	"Elements": {},
 };
 
 for (let i in Tools.data.elements) {
@@ -87,8 +85,8 @@ exports.commands = {
 exports.aliases = ['triv'];
 exports.variations = [
 	{
-		name: "Element Trivia",
-		aliases: ['Elements'],
+		name: "Elements",
+		aliases: ['Element Trivia'],
 		variation: "Periodic Elements",
 		variationAliases: ['elements'],
 	},
@@ -96,7 +94,7 @@ exports.variations = [
 exports.modes = ["Survival", "Team"];
 // if inheriting from or inherited by another game, this game would be exported as:
 // exports.install = Trivia;
-exports.install = Trivia;
+exports.install = Elements;
 
 /**
  * @param {Trivia} game
