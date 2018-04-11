@@ -97,7 +97,7 @@ exports.modes = ["Survival", "Team"];
 exports.install = Trivia;
 
 /**
- * @param {Trivia} game
+ * @param {Elements} game
  */
 exports.spawnMochaTests = function (game) {
 	// you can skip tests for variations or modes by checking "game.variationId" or "game.modeId" here
