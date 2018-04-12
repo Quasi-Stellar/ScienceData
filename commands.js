@@ -148,7 +148,6 @@ let commands = {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
 		if (target === 'off') return this.say("/modchat off");
 		if (target === 'ac') return this.say("/modchat ac");
-		if (target === 'ac') return this.say("/modchat ac");
 		if (target === 'voice') return this.say("/modchat +");
 		if (target === '+') return this.say("/modchat +");
 		if (target === 'trusted') return this.say("/modchat trusted");
