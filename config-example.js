@@ -60,7 +60,7 @@ exports.groups = {
 /**@type {Array<string>} */
 exports.bannedWords = [];
 
-// Userids of those who have debug access to ScienceData
+// Userids of those who have debug access to ScienceData. These users will have acess to every functioning command on the bot.
 // example: exports.developers = ['devuser1', 'devuser2', 'devuser3'];
 /**@type {Array<string>} */
 exports.developers = [''];
