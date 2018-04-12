@@ -6,13 +6,13 @@ A bot for [Pokemon Showdown][1].
   [1]: https://github.com/Zarel/Pokemon-Showdown
 
 ## Installation
-Cassius requires [Node.js][2] version 6.0.0 or later and a command line (e.g. `Command Prompt` on Windows or `Terminal` on Mac OS/Linux) to run. Once you have compatible software, complete installation by following these steps:
+ScienceData requires [Node.js][2] version 6.0.0 or later and a command line (e.g. `Command Prompt` on Windows or `Terminal` on Mac OS/Linux) to run. Once you have compatible software, complete installation by following these steps:
 
 1. Obtain a copy of ScienceData
 
   You can do this through the [GitHub client][3] by clicking the "Clone or download" button on the home page of the repository and then clicking "Open in Desktop". You can also use the following [Git][4] command:
   
-  `git clone https://github.com/sirDonovan/Cassius.git`
+  `git clone https://github.com/Aurolux/Sciece-Data.git`
 
   [2]: https://nodejs.org/
   [3]: https://desktop.github.com/
