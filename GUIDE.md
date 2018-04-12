@@ -13,6 +13,10 @@
 `.tour` - gives stats on an ongoing tournament
 `.tour start` - starts a previously created tour
 `.tour end` - ends a previously stared OR created tour
+## Quotes - Voice and Above
+`.addquote [quote]` - adds quotes to the database
+`.removequote [quotes]` OR `.deletequote [quote]` -  deletes quotes from the database
+`.randquote` - bot generates a random quote
 ## General Commands
 ### Mod and Above
 `.kill` - logs the bot out
