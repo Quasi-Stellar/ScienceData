@@ -215,6 +215,15 @@ let commands = {
 			Tools.uploadToHastebin('Messages:\n\n' + output.join('\n'), /**@param {string} link*/ link => this.say("/msg " + user.name + ", Messages Log: " + link));
 		}
 	},
+	// OF THE DAY COMMANDS
+	// Scientist of the day
+	vmb: 'viewmessageblacklist',
+	viewmessageblacklist: function (target, room, user) {
+		if (room instanceof Users.User || !user.hasRank(room, '@')) return false;
+		if (!database.messageBlacklist) return this.say('No users are blacklisted from the message system');
+		let messageBlacklist = Object.keys(database.messageBlacklist);
+		Tools.uploadToHastebin('The following users are banned in ' + room + ':\n\n' + messageBlacklist.join('\n'), /**@param {string} link*/ link => this.say("/pm " + user.name + ", Message Blacklist: " + link));
+	},
 	// Returns the scientist of the day for science room
 	'scientist': 'sotd',
 	sotd: function (target, room, user) {
@@ -292,14 +301,6 @@ let commands = {
 		this.say(text + "The Scientist of the Day has been set to '" + targets[0] + "'!");
 		this.say("/modnote The Scientist of the Day was set to " + database.sotd.title + " by " + database.sotd.user + ".");
 		},
-	//Returns the list of users blacklisted from using the messaging system.
-	vmb: 'viewmessageblacklist',
-	viewmessageblacklist: function (target, room, user) {
-		if (room instanceof Users.User || !user.hasRank(room, '@')) return false;
-		if (!database.messageBlacklist) return this.say('No users are blacklisted from the message system');
-		let messageBlacklist = Object.keys(database.messageBlacklist);
-		Tools.uploadToHastebin('The following users are banned in ' + room + ':\n\n' + messageBlacklist.join('\n'), /**@param {string} link*/ link => this.say("/pm " + user.name + ", Message Blacklist: " + link));
-	},
 	/*
 	* Scribe Shop Commands!
 	*/
