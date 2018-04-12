@@ -63,12 +63,13 @@ let commands = {
 		Storage.exportDatabase(room.id);
 		this.say("Your quote was successfully added.");
 	},
+	'deletequote': 'removequote',
 	removequote: function (target, room, user) {
 		if (room instanceof Users.User) return;
 		let database = getDatabase(room.id);
 		if (!user.hasRank(room, database.defaultRanks['quotes'])) return;
 		target = target.trim();
-		if (!target) return this.say("Please use the following format: .removequote quote");
+		if (!target) return this.say("Please use the following format: .removequote quote OR .deletequote quote");
 		let quotes = database.quotes;
 		let index = quotes.findIndex(/**@param {string} quote */ quote => Tools.toId(quote) === Tools.toId(target));
 		if (index < 0) return this.say("Your quote doesn't exist in the database.");
