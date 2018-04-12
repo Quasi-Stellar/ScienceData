@@ -12,7 +12,7 @@ ScienceData requires [Node.js][2] version 6.0.0 or later and a command line (e.g
 
   You can do this through the [GitHub client][3] by clicking the "Clone or download" button on the home page of the repository and then clicking "Open in Desktop". You can also use the following [Git][4] command:
   
-  `git clone https://github.com/Aurolux/Sciece-Data.git`
+  `git clone https://github.com/Aurolux/ScieceData.git`
 
   [2]: https://nodejs.org/
   [3]: https://desktop.github.com/
@@ -24,7 +24,7 @@ ScienceData requires [Node.js][2] version 6.0.0 or later and a command line (e.g
 
   `cd DIRECTORY`
   
-  Replace `DIRECTORY` with the filepath to your directory (e.g. `C:\Users\Aurolux\Documents\GitHub\Science-Data`).
+  Replace `DIRECTORY` with the filepath to your directory (e.g. `C:\Users\Aurolux\Documents\GitHub\SciencaData`).
 
 3. Install dependencies
 
@@ -57,6 +57,6 @@ From this point on, you can start the bot by running the following command:
 
 ## License
 
-  Science-Data is distributed under the terms of the [MIT License][7].
+  ScienceData is distributed under the terms of the [MIT License][7].
 
-  [7]: https://github.com/Aurolux/Science-Data/blob/master/LICENSE
+  [7]: https://github.com/Aurolux/ScienceData/blob/master/LICENSE
