@@ -21,6 +21,7 @@ for (let i in Tools.data.elements) {
 	if (!(desc in data["Elements"])) data["Elements"][desc] = [];
 	data["Elements"][desc].push(element.name);
 }
+// This game is basically a bunch of other minigames mashed together
 // if inheriting from or inherited by another game, this class would be declared as:
 // let Trivia = base => class extends base {
 class Trivia extends Games.Game {
