@@ -121,4 +121,72 @@ exports.ChemicalElements = {
                  name: "Zinc",
                  desc: "Symbol: Zn | Atomic Number: 30"
               },
+         "gallium": {
+                 name: "Gallium",
+                 desc: "Symbol: Ga | Atomic Number: 31"
+              },
+        "germanium": {
+                 name: "Germanium",
+                 desc: "Symbol: Ge | Atomic Number: 32"
+              },
+         "arsenic": {
+                 name: "Arsenic",
+                 desc: "Symbol: As | Atomic Number: 33"
+              },
+        "selenium": {
+                 name: "Selenium",
+                 desc: "Symbol: Se | Atomic Number: 34"
+              },
+        "bromine": {
+                 name: "Bromine",
+                 desc: "Symbol: Br | Atomic Number: 35"
+              },
+        "krypton": {
+                 name: "Krypton",
+                 desc: "Symbol: Kr | Atomic Number: 36"
+              },
+        "rubidium": {
+                 name: "Rubidium",
+                 desc: "Symbol: Rb | Atomic Number: 37"
+              },
+        "strontium": {
+                 name: "Strontium",
+                 desc: "Symbol: Sr | Atomic Number: 38"
+              },
+        "yttrium": {
+                 name: "Yttrium",
+                 desc: "Symbol: Y | Atomic Number: 39"
+              },
+        "zirconium": {
+                 name: "Zirconium",
+                 desc: "Symbol: Zr | Atomic Number: 40"
+              },
+        "niobium": {
+                 name: "Niobium",
+                 desc: "Symbol: Nb | Atomic Number: 41"
+              },
+        "molybdenum": {
+                 name: "Molybdenum",
+                 desc: "Symbol: Mo | Atomic Number: 42"
+              },
+        "technetium": {
+                 name: "Technetium",
+                 desc: "Symbol: Tc | Atomic Number: 43"
+              },
+        "ruthenium": {
+                 name: "Ruthenium",
+                 desc: "Symbol: Ru | Atomic Number: 44"
+              },
+        "rhodium": {
+                 name: "Rhodium",
+                 desc: "Symbol: Rh | Atomic Number: 45"
+              },
+        "palladium": {
+                 name: "Palladium",
+                 desc: "Symbol: Pd | Atomic Number: 46"
+              },
+        "silver": {
+                 name: "Silver",
+                 desc: "Symbol: Ag | Atomic Number: 47"
+              },
 };
