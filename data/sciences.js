@@ -18,7 +18,7 @@ exports.ScienceTypes = {
                 name: "Anthropology"
               },
         "Astronomy": {
-                desc: "The study of celestial bodies.",
+                desc: "The study of celestial bodies and the universe.",
                 name: "Astronomy"
               },
         "Astrophysics": {
@@ -58,12 +58,8 @@ exports.ScienceTypes = {
                 name: "Cosmology"
               },
         "Cryptology": {
-                desc: "The study of code.",
+                desc: "The study of code and encryption.",
                 name: "Cryptology"
-              },
-        "Dendrochronology": {
-                desc: "The study of tree rings.",
-                name: "Dendrochronology"
               },
         "Geology": {
                 desc: "The study of the earth and its features.",
@@ -83,14 +79,14 @@ exports.ScienceTypes = {
               },
        "Gastroenterology": {
                 desc: "The study of the stomach and intestines.",
-                name: "Gastroenertology"
+                name: "Gastroenterology"
              },
        "Geology": {
-                desc: "The study of the earth and its features.",
+                desc: "The study of the earth, its structure and its formation.",
                 name: "Geology"
              },
       "Geography": {
-                desc: "The study of the earth and its features.",
+                desc: "The study of the earth and its physical features, and of relating human activity.",
                 name: "Geography"
              },
       "Geogony": {
@@ -108,5 +104,25 @@ exports.ScienceTypes = {
       "Hematology": {
                 desc: "The study of blood.",
                 name: "Hematology"
+             },
+      "Mycology": {
+                desc: "The study of life specifically in kingdom fungi.",
+                name: "Mycology"
+             },
+      "Pathology": {
+                desc: "The study of the causes and effects of diseases.",
+                name: "Pathology"
+             },
+      "Physics": {
+                desc: "The study of the structure of matter and its behaviours and interactions.",
+                name: "Physics"
+             },
+      "Seismology": {
+                desc: "The study of propagation of elastic waves throughout the earth and other similar bodies.",
+                name: "Seismology"
+             },
+      "Zoology": {
+                desc: "The study of life specifically in kingdom animalia.",
+                name: "Zoology"
              },
 };
