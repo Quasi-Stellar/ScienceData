@@ -71,7 +71,7 @@ class Sciences extends Games.Game {
 
 exports.name = name;
 exports.id = Tools.toId(name);
-exports.description = "Do you know the different types of science? ``" + Config.commandCharacter + "g [element]`` to find out!";
+exports.description = "Do you know the different types of science? ``" + Config.commandCharacter + "g [answer]`` to find out!";
 exports.commands = {
 	// command: game function
 	// alias: command
