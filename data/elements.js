@@ -189,4 +189,288 @@ exports.ChemicalElements = {
                  name: "Silver",
                  desc: "Symbol: Ag | Atomic Number: 47"
               },
+        "cadmium": {
+                 name: "Cadmium",
+                 desc: "Symbol: Cd | Atomic Number: 48"
+              },
+        "indium": {
+                 name: "Indium",
+                 desc: "Symbol: In | Atomic Number: 49"
+              },
+        "tin": {
+                 name: "Tin",
+                 desc: "Symbol: Sn | Atomic Number: 50"
+              },
+        "antimony": {
+                 name: "Antimony",
+                 desc: "Symbol: Sb | Atomic Number: 51"
+              },
+        "tellerium": {
+                 name: "Tellerium",
+                 desc: "Symbol: Te | Atomic Number: 52"
+              },
+        "iodine": {
+                 name: "Iodine",
+                 desc: "Symbol: I | Atomic Number: 53"
+              },
+        "xenon": {
+                 name: "Xenon",
+                 desc: "Symbol: Xe | Atomic Number: 54"
+              },
+        "cesium": {
+                 name: "Cesium",
+                 desc: "Symbol: Cs | Atomic Number: 55"
+              },
+        "barium": {
+                 name: "Barium",
+                 desc: "Symbol: Ba | Atomic Number: 56"
+              },
+        "lanthanum": {
+                 name: "Lanthanum",
+                 desc: "Symbol: La | Atomic Number: 57"
+              },
+        "cerium": {
+                 name: "Cerium",
+                 desc: "Symbol: Ce | Atomic Number: 58"
+              },
+        "praseodymium": {
+                 name: "Praseodymium",
+                 desc: "Symbol: Pr | Atomic Number: 59"
+              },
+        "neodymium": {
+                 name: "Neodymium", 
+                 desc: "Symbol: Nd | Atomic Number: 60"
+              },
+        "promethium": {
+                 name: "Promethium",
+                 desc: "Symbol: Pm | Atomic Number: 61"
+              },
+        "samarium": {
+                 name: "Samarium",
+                 desc: "Symbol: Sm | Atomic Number: 62"
+              },
+        "europium": {
+                 name: "Europium",
+                 desc: "Symbol: Eu | Atomic Number: 63"
+              },
+        "gadolinium": {
+                 name: "Gadolinium",
+                 desc: "Symbol: Gd | Atomic Number: 64"
+              },
+        "terbium": {
+                 name: "Terbium",
+                 desc: "Symbol: Tb | Atomic Number: 65"
+              },
+        "dysprosium": {
+                 name: "Dysprosium",
+                 desc: "Symbol: Dy | Atomic Number: 66"
+              },
+        "holmium": {
+                 name: "Holmium",
+                 desc: "Symbol: Ho | Atomic Number: 67"
+              },
+        "erbium": {
+                 name: "Erbium",
+                 desc: "Symbol: Er | Atomic Number : 68"
+              },
+        "thulium": {
+                 name: "Thulium",
+                 desc: "Symbol: Tm | Atomic Number: 69"
+              },
+        "ytterbium": {
+                 name: "Ytterbium",
+                 desc: "Symbol: Yb | Atomic Number: 70"
+              },
+        "lutetium": {
+                 name: "Lutetium",
+                 desc: "Symbol: Lu | Atomic Number: 71"
+              },
+        "hafnium": {
+                 name: "Hafnium",
+                 desc: "Symbol: Hf | Atomic Number: 72"
+              },
+        "tantalum": {
+                 name: "Tantalum",
+                 desc: "Symbol: Ta | Atomic Number: 73"
+              },
+        "tungsten": {
+                 name: "Tungsten",
+                 desc: "Symbol: W | Atomic Number: 74"
+              },
+        "rhenium": {
+                 name: "Rhenium",
+                 desc: "Symbol: Re | Atomic Number: 75"
+              },
+        "osmium": {
+                 name: "Osmium",
+                 desc: "Symbol: Os | Atomic Number: 76"
+              },
+        "iridium": {
+                 name: "Iridium",
+                 desc: "Symbol: Os | Atomic Number: 77"
+              },
+        "platinum": {
+                 name: "Platinum",
+                 desc: "Symbol: Pt | Atomic Number: 78"
+              },
+        "gold": { 
+                 name: "Gold",
+                 desc: "Symbol: Au | Atomic Number: 79"
+              },
+        "mercury": {
+                 name: "Mercury",
+                 desc: "Symbol: Hg | Atomic Number: 80"
+              },
+        "thallium": {
+                 name: "Thallium",
+                 desc: "Symbol: Tl | Atomic Number: 81"
+              },
+        "lead": {
+                 name: "Lead",
+                 desc: "Symbol: Pb | Atomic Number: 82"
+              },
+        "bismuth": {
+                 name: "Bismuth",
+                 desc: "Symbol: Bi | Atomic Number: 83"
+              },
+        "polonium": {
+                 name: "Polonium",
+                 desc: "Symbol: Po | Atomic Number: 84"
+              },
+        "astatine": {
+                 name: "Astatine",
+                 desc: "Symbol: At | Atomic Number: 85"
+              },
+        "radon": {
+                 name: "Radon",
+                 desc: "Symbol: Rn | Atomic Number: 86"
+              },
+        "francium": {
+                 name: "Francium",
+                 desc: "Symbol: Fr | Atomic Number: 87"
+              },
+        "radium": {
+                 name: "Radium",
+                 desc: "Symbol: Ra | Atomic Number: 88"
+              },
+        "actinium": {
+                 name: "Actinium",
+                 desc: "Symbol: Ac | Atomic Number: 89"
+              },
+        "thorium": {
+                 name: "Thorium",
+                 desc: "Symbol: Th | Atomic Number: 90"
+              },
+        "protactinium": {
+                 name: "Protactinium",
+                 desc: "Symbol: Pa | Atomic Number: 91"
+              },
+        "uranium": {
+                 name: "Uranium",
+                 desc: "Symbol: U | Atomic Number: 92"
+              },
+        "neptunium": {
+                 name: "Neptunium",
+                 desc: "Symbol: Np | Atomic Number: 93"
+              },
+        "plutonium": {
+                 name: "Plutonium",
+                 desc: "Symbol: Pu | Atomic Number: 94"
+              },
+        "americium": {
+                 name: "Americium",
+                 desc: "Symbol: Am | Atomic Number: 95"
+              },
+        "curium": {
+                 name: "Curium",
+                 desc: "Symbol: Cm | Atomic Number: 96"
+              },
+        "berkelium": {
+                 name: "Berkelium",
+                 desc: "Symbol: Bk | Atomic Number: 97"
+              },
+        "californium": {
+                 name: "Californium",
+                 desc: "Symbol: Cf | Atomic Number: 98"
+              },
+        "einsteinium": {
+                 name: "Einsteinium",
+                 desc: "Symbol: Es | Atomic Number: 99"
+              },
+        "fermium": {
+                 name: "Fermium",
+                 desc: "Symbol: Fm | Atomic Number: 100"
+              },
+        "mendelevium": {
+                 name: "Mendelevium",
+                 desc: "Symbol: Md | Atomic Number: 101"
+              },
+        "nobelium": {
+                 name: "Nobelium",
+                 desc: "Symbol: No | Atomic Number: 102"
+              },
+        "lawrencium": {
+                 name: "Lawrencium",
+                 desc: "Symbol: Lr | Atomic Number: 103"
+              },
+        "rutherfordium": {
+                 name: "Rutherfordium",
+                 desc: "Symbol: Rf | Atomic Number: 104"
+              },
+        "dubnium": {
+                 name: "Dubnium",
+                 desc: "Symbol: Db | Atomic Number: 105"
+              },
+        "seaborgium": {
+                 name: "Seaborgium",
+                 desc: "Symbol: Sg | Atomic Number: 106"
+              },
+        "bohrium": {
+                 name: "Bohrium",
+                 desc: "Symbol: Bh | Atomic Number: 107"
+              },
+        "hassium": {
+                 name: "Hassium",
+                 desc: "Symbol: Hs | Atomic Number: 108"
+              },
+        "meitnerium": {
+                 name: "Meitnerium",
+                 desc: "Symbol: Mt | Atomic Number: 109"
+              },
+        "darmstadtium": {
+                 name: "Darmstadtium",
+                 desc: "Symbol: Ds | Atomic Number: 110"
+              },
+        "roentgenium": {
+                 name: "Roentgenium",
+                 desc: "Symbol: Rg | Atomic Number: 111"
+              },
+        "copernicium": {
+                 name: "Copernicium",
+                 desc: "Symbol: Cn | Atomic Number: 112"
+              },
+        "nihonium": {
+                 name: "Nihonium",
+                 desc: "Symbol: Nh | Atomic Number: 113"
+              },
+        "flerovium": {
+                 name: "Flerovium",
+                 desc: "Symbol: Fl | Atomic Number: 114"
+              },
+        "moscovium": {
+                 name: "Moscovium",
+                 desc: "Symbol: Mc | Atomic Number: 115"
+              },
+        "livermorium": {
+                 name: "Livermorium",
+                 desc: "Symbol: Lv | Atomic Number: 116"
+              },
+        "tennessine": {
+                 name: "Tennessine",
+                 desc: "Symbol: Ts | Atomic Number: 117"
+              },
+        "oganesson": {
+                 name: "Oganesson",
+                 desc: "Symbol: Og | Atomic Number: 118"
+              },      
 };
