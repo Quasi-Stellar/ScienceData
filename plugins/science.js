@@ -262,17 +262,7 @@ let commands = {
 		if (database.scribeShop) {
 			if (typo || (!(room instanceof Users.User) && user.hasRank(room, '+'))) {
 				hasPerms = true;
-			} else {
-				for (let i = 0; i < database.scribeShop.length; i++) {
-					if (database.scribeShop[i].account === user.id) {
-						if (database.scribeShop[i].wotd !== 0) {
-							database.scribeShop[i].wotd -= 1;
-							hasPerms = true;
-							this.say("Redeeming your Poetic License... Uses remaining: " + database.scribeShop[i].wotd + "!");
-						}
-					}
-				}
-			}
+			} 
 		} else if (!(room instanceof Users.User) && user.hasRank(room, '+')) {
 			hasPerms = true;
 		}
