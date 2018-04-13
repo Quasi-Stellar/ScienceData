@@ -30,7 +30,7 @@ let commands = {
 	// General commands
 	git: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("ScienceData's code: https://github.com/Aurolux/Science-Data");
+		this.say("ScienceData's code: https://github.com/Aurolux/ScienceData");
 	},
 	kill: 'logout',
 	kill: function (target, room, user) {
