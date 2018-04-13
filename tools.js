@@ -109,6 +109,7 @@ class Tools {
 		this.loadTeams();
 		this.loadTrainerClasses();
 		this.loadElements();
+		this.loadSciences();
 		this.loadedData = true;
 	}
 
@@ -165,6 +166,19 @@ class Tools {
 			}
 		}
 		if (elements) this.data.elements = elements;
+	}
+
+	loadSciences() {
+
+		let sciences;
+		try {
+			sciences = require(this.dataFilePath + 'sciences.js').ScienceTypes;
+		} catch (e) {
+			if (e.code !== 'MODULE_NOT_FOUND') {
+				throw e;
+			}
+		}
+		if (sciences) this.data.sciences = sciences;
 	}
 	loadAbilities() {
 		if (this.loadedData) this.AbilityCache.clear();
