@@ -215,8 +215,6 @@ let commands = {
 			Tools.uploadToHastebin('Messages:\n\n' + output.join('\n'), /**@param {string} link*/ link => this.say("/msg " + user.name + ", Messages Log: " + link));
 		}
 	},
-	// OF THE DAY COMMANDS
-	// Scientist of the day
 	vmb: 'viewmessageblacklist',
 	viewmessageblacklist: function (target, room, user) {
 		if (room instanceof Users.User || !user.hasRank(room, '@')) return false;
@@ -224,7 +222,8 @@ let commands = {
 		let messageBlacklist = Object.keys(database.messageBlacklist);
 		Tools.uploadToHastebin('The following users are banned in ' + room + ':\n\n' + messageBlacklist.join('\n'), /**@param {string} link*/ link => this.say("/pm " + user.name + ", Message Blacklist: " + link));
 	},
-	// Returns the scientist of the day for science room
+	// Of the Day commands
+	// Scientist of the Day
 	'scientist': 'sotd',
 	sotd: function (target, room, user) {
 		let text = room instanceof Users.User || user.hasRank(room, '+') ? '' : '/pm ' + user.name + ', ';
