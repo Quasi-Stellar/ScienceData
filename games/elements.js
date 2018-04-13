@@ -6,10 +6,11 @@
  */
 
 'use strict';
+const data = {"Elements": {}};
 const name = "elements";
 const elements = Storage.getDatabase('elements');
 for (let i in Tools.data.elements) {
-	let element = Tools.getExistingElement(i);
+	let element = Tools.data.elements[i]
 	if (!element.name) continue;
 	let desc = element.desc || element.shortDesc;
 	if (!desc) continue;
@@ -19,7 +20,7 @@ for (let i in Tools.data.elements) {
 
 // if inheriting from or inherited by another game, this class would be declared as:
 // let Trivia = base => class extends base {
-let Trivia = base => class extends base {
+class Elements extends Games.Game {
 	/**
 	 * @param {Room} room
 	 */
@@ -89,7 +90,7 @@ exports.variations = [
 exports.modes = ["Survival", "Team"];
 // if inheriting from or inherited by another game, this game would be exported as:
 // exports.install = Trivia;
-exports.install = Trivia;
+exports.game = Elements;
 
 /**
  * @param {Elements} game
