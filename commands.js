@@ -86,8 +86,8 @@ let commands = {
 	},
 
 	// Game commands
-	signups: 'creategame',
-	creategame: function (target, room, user) {
+	signups: 'game',
+	game: function (target, room, user) {
 		if (room instanceof Users.User) return;
 		if (!user.hasRank(room, '+')) return;
 		if (!Config.games || !Config.games.includes(room.id)) return this.say("Games are not enabled for this room.");
