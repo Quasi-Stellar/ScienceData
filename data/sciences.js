@@ -76,6 +76,7 @@ exports.ScienceTypes = {
         "Economics": {
                 desc: "The branch of knowledge concerned with the production, consumption, and transfer of wealth.",
                 name: "Economics"
+             },
         "Garbology": {
                 desc: "The study of trash and its effects.",
                 name: "Garbology"
@@ -107,9 +108,5 @@ exports.ScienceTypes = {
       "Hematology": {
                 desc: "The study of blood.",
                 name: "Hematology"
-             },
-      "Geogony": {
-                desc: "The study of the earth's formation.",
-                name: "Geogony"
              },
 };
