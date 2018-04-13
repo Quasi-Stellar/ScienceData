@@ -10,7 +10,7 @@
 const name = "Trivia";
 
 const data = {
-	"Elements": {}
+	"Elements": {},
 	"Sciences": {}
 };
 for (let i in Tools.data.sciences) {
