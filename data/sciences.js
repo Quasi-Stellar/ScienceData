@@ -3,43 +3,43 @@
 exports.ScienceTypes = {
         "Aerodynamics": {
                 desc: "The study of the dynamics of gases; Science of movement in a flow of air or gas.",
-                name: "Aerodynamics",
+                name: "Aerodynamics"
               },
         "Agrology": {
                 desc: "The study of the application of science to agriculture.",
-                name: "Agrology",
+                name: "Agrology"
               },
         "Anatomy": {
                 desc: "The study of the structure of a body.",
-                name: "Anatomy",
+                name: "Anatomy"
               },
         "Anthropology": {
                 desc: "The study of human cultures.",
-                name: "Anthropology",
+                name: "Anthropology"
               },
         "Astronomy": {
                 desc: "The study of celestial bodies.",
-                name: "Astronomy",
+                name: "Astronomy"
               },
         "Astrophysics": {
                 desc: "The study of the behavior of astronomical figures.",
-                name: "Astrophysics",
+                name: "Astrophysics"
               },
        "Biology": {
                 desc: "The study of life.",
-                name: "Biology",
+                name: "Biology"
               },
        "Botany": {
                 desc: "The study of life specifically in kingdom plantae.",
-                name: "Botany",
+                name: "Botany"
               },
         "Cardiology": {
                 desc: "The study of the heart.",
-                name: "Cardiology",
+                name: "Cardiology"
               },
         "Cartography": {
                 desc: "The study of making geographical maps and globes.",
-                name: "Cartography",
+                name: "Cartography"
               },
         "Chemistry": {
                 desc: "The study of substances and their properties.",
