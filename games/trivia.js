@@ -76,7 +76,7 @@ class Trivia extends Games.Game {
 		}
 		this.setAnswers();
 		this.on(this.hint, () => {
-			this.timeout = setTimeout(() => this.nextRound(), 10 * 1000);
+			this.timeout = setTimeout(() => this.nextRound(), 20 * 1000);
 		});
 		this.say(this.hint);
 	}
