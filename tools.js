@@ -154,6 +154,19 @@ class Tools {
 		if (items) this.data.items = items;
 	}
 
+	loadElements() {
+		if (this.loadedData) this.ElementCache.clear();
+
+		let elements;
+		try {
+			elements = require(this.dataFilePath + 'elements.js').ChemicalElements;
+		} catch (e) {
+			if (e.code !== 'MODULE_NOT_FOUND') {
+				throw e;
+			}
+		}
+		if (elements) this.data.elements = elements;
+	}
 	loadAbilities() {
 		if (this.loadedData) this.AbilityCache.clear();
 
