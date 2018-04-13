@@ -108,7 +108,7 @@ class Tools {
 		this.loadFormatsData();
 		this.loadTeams();
 		this.loadTrainerClasses();
-
+		this.loadElements();
 		this.loadedData = true;
 	}
 
