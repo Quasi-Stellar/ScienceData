@@ -290,6 +290,73 @@ let commands = {
 		this.say(text + "The Scientist of the Day has been set to '" + targets[0] + "'!");
 		this.say("/modnote The Scientist of the Day was set to " + database.sotd.title + " by " + database.sotd.user + ".");
 		},
+	// Fact of the Day
+	'fact': 'fotd',
+	fotd: function (target, room, user) {
+		let text = room instanceof Users.User || user.hasRank(room, '+') ? '' : '/pm ' + user.name + ', ';
+		if (!target) {
+			if (!database.fotd) return this.say(text + "No fact of the Day has been set.");
+			let tem = new Date(database.fotd.time).toLocaleString('en-US', {hour: 'numeric', minute:'numeric', day:'2-digit', month:'long', hour12: true, timeZoneName: 'short'});
+			let box = '<div style="font-family: Georgia, serif ; max-width: 550px ; margin: auto ; padding: 8px 8px 12px 8px; text-align: left; background: rgba(250, 250, 250, 0.8)"> <span style="display: block ; font-family: Verdana, Geneva, sans-serif ; font-size: 16pt ; font-weight: bold ; background: #e27a0b ; padding: 3px 0 ; text-align: center ; border-radius: 2px ; color: rgba(255 , 255 , 255 , 1) ; margin-bottom: 0px"> <i class="fa fa-thermometer-1"></i> Fact of the Day <i class = "fa fa-thermometer-1"></i> </span><table style="padding-top: 0px;"> <tr> <td style="padding-left:8px; vertical-align:baseline;"> <div style="font-size: 22pt ; margin-top: 5px; color: black;">' + database.fotd.fact + '</div><span style="font-family:sans-serif;font-size:12pt;display:block;color:rgba(0,0,0,0.7);letter-spacing:0px;"><b>Field of Science:</b> <span style="letter-spacing:0;">' + database.fotd.type + '</span></span> <span style="font-size:10pt;font-family:sans-serif;margin-top:10px;display:block;color:rgba(0,0,0,0.8)"><strong style="font-family:serif;margin-right:10px;color:rgba(0,0,0,0.5)"></strong>' + database.fotd.description + '</span></td></tr></table></div>';
+			let boxpm = '<div style="font-family: Georgia, serif ; max-width: 550px ; margin: auto ; padding: 8px 8px 12px 8px; text-align: left; background: rgba(250, 250, 250, 0.8)"> <span style="display: block ; font-family: Verdana, Geneva, sans-serif ; font-size: 16pt ; font-weight: bold ; background: #e27a0b ; padding: 3px 0 ; text-align: center ; border-radius: 2px ; color: rgba(255 , 255 , 255 , 1) ; margin-bottom: 0px"> <i class="fa fa-thermometer-1"></i> Fact of the Day <i class = "fa fa-thermometer-1"></i> </span><table style="padding-top: 0px;"> <tr> <td style="padding-left:8px; vertical-align:baseline;"> <div style="font-size: 22pt ; margin-top: 5px; color: black;">' + database.fotd.fact + '</div><span style="font-family:sans-serif;font-size:12pt;display:block;color:rgba(0,0,0,0.7);letter-spacing:0px;"><b>Field of Science:</b> <span style="letter-spacing:0;">' + database.fotd.type + '</span></span> <span style="font-size:10pt;font-family:sans-serif;margin-top:10px;display:block;color:rgba(0,0,0,0.8)"><strong style="font-family:serif;margin-right:10px;color:rgba(0,0,0,0.5)"></strong>' + database.fotd.description + '</span></td></tr></table></div>';
+			if (!(room instanceof Users.User) && user.hasRank(room, '+')) {
+				return this.sayHtml(box);
+			} else {
+				// The below is a hacky way to get pminfobox to work within PM. It defaults to Writing since AxeBot/The Scribe is always * in that room. For personal bots, this should be changed to any room that you can guarentee the bot has at least * permissions.
+				if (!(room instanceof Users.User) && Users.self.rooms.get(room) === '*') {
+					return this.pmHtml(user, boxpm);
+				} else {
+					return this.say(text + "Today's Fact of the Day is **" + database.fotd.fact + "**:" + database.fotd.description);
+				}
+			}
+		}
+		if (Tools.toId(target) === 'check' || Tools.toId(target) === 'time') {
+			if (!database.fotd) return this.say(text + "There is no Fact of the Day to check!");
+			return this.say(text + "The Fact of the Day was last updated to **" + database.fotd.title + "** " + Tools.toDurationString(Date.now() - database.fotd.time) + " ago by " + database.fotd.user);
+		}
+		let targets = target.split('|');
+		let typo = false;
+		if (targets[0] === "typo") {
+			if (!database.fotd) return this.say(text + "There is no Fact of the Day to correct!");
+			if ((room instanceof Users.User || !user.hasRank(room, '%')) && user.name !== database.fotd.user) return this.say(text + "Sorry, you must be the original user or driver and above to make typo corrections.");
+			typo = true;
+			targets.shift();
+		}
+		if (database.fotd) {
+			if (!typo && Date.now() - database.fotd.time < 61200000) return this.say(text + "Sorry, but at least 17 hours must have passed since the SOTD was last set in order to set it again!");
+		}
+		let hasPerms = false;
+		if (database.scribeShop) {
+			if (typo || (!(room instanceof Users.User) && user.hasRank(room, '+'))) {
+				hasPerms = true;
+			} 
+		} else if (!(room instanceof Users.User) && user.hasRank(room, '+')) {
+			hasPerms = true;
+		}
+		if (!hasPerms) return this.say(text + 'You must be at least Voice or higher to set the Scientist of the Day.');
+		if (targets.length < 3) return this.say(text + "Invalid arguments specified. The format is: __title__ | __description__.");
+		let fotd = {
+			fact: targets[0].trim(),
+			type: targets[1],
+			description: targets[2].trim(),
+		};
+		if (!typo) {
+			fotd.time = Date.now();
+			fotd.user = user.name;	
+		} else {
+			fotd.time = database.fotd.time;
+			fotd.user = database.fotd.user;
+		}
+		if (!database.fotdFact) {
+			database.fotdFact = [];
+		}
+		database.fotd = fotd;
+		database.fotdFact.push(fotd);
+		Storage.exportDatabase('science');
+		this.say(text + "The Fact of the Day has been set to '" + targets[0] + "'!");
+		this.say("/modnote The Fact of the Day was set to " + database.fotd.fact + " by " + database.fotd.user + ".");
+		},
+
 	// Star of the Day
 	'star': 'stotd',
 	stotd: function (target, room, user) {
