@@ -155,7 +155,6 @@ class Tools {
 	}
 
 	loadElements() {
-		if (this.loadedData) this.ElementCache.clear();
 
 		let elements;
 		try {
