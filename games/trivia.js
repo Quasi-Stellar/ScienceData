@@ -10,38 +10,17 @@
 const name = "Trivia";
 
 const data = {
-	"Pokemon Moves": {},
-	"Pokemon Items": {},
-	"Pokemon Abilities": {},
+	"Elements": {}
 };
 
-for (let i in Tools.data.moves) {
-	let move = Tools.getExistingMove(i);
-	if (!move.name) continue;
-	let desc = move.desc || move.shortDesc;
+for (let i in Tools.data.elements) {
+	let element = Tools.data.elements[i]
+	if (!element.name) continue;
+	let desc = element.desc || element.shortDesc;
 	if (!desc) continue;
-	if (!(desc in data["Pokemon Moves"])) data["Pokemon Moves"][desc] = [];
-	data["Pokemon Moves"][desc].push(move.name);
+	if (!(desc in data["Elements"])) data["Elements"][desc] = [];
+	data["Elements"][desc].push(element.name);
 }
-
-for (let i in Tools.data.items) {
-	let item = Tools.getExistingItem(i);
-	if (!item.name) continue;
-	let desc = item.desc || item.shortDesc;
-	if (!desc) continue;
-	if (!(desc in data["Pokemon Items"])) data["Pokemon Items"][desc] = [];
-	data["Pokemon Items"][desc].push(item.name);
-}
-
-for (let i in Tools.data.abilities) {
-	let ability = Tools.getExistingAbility(i);
-	if (!ability.name) continue;
-	let desc = ability.desc || ability.shortDesc;
-	if (!desc) continue;
-	if (!(desc in data["Pokemon Abilities"])) data["Pokemon Abilities"][desc] = [];
-	data["Pokemon Abilities"][desc].push(ability.name);
-}
-
 // if inheriting from or inherited by another game, this class would be declared as:
 // let Trivia = base => class extends base {
 class Trivia extends Games.Game {
