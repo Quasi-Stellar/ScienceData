@@ -71,7 +71,7 @@ class Elements extends Games.Game {
 
 exports.name = name;
 exports.id = Tools.toId(name);
-exports.description = "Do you know the periodic table? ``.g [element]`` to find out!";
+exports.description = "Do you know the periodic table? ``" + Config.commandCharacter + "g [element]`` to find out!";
 exports.commands = {
 	// command: game function
 	// alias: command
