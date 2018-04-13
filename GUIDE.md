@@ -1,5 +1,8 @@
 # Guide
-
+## Games
+`.game Trivia` - plays a game of all added categories of science
+`.game Sciences` - plays a game on types of science
+`.gane Elements` - plays a game on the Periodic Table
 ## Hangmans - voices and above
 `.hangman` - randomly selects a hangman from the database
 `.addhangman room, solution, hint` - adds hangman to database
