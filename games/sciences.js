@@ -33,7 +33,7 @@ class Sciences extends Games.Game {
 		this.timeout = null;
 		this.hint = '';
 		this.points = new Map();
-		this.maxPoints = 4;
+		this.maxPoints = 5;
 		this.categories = Object.keys(data);
 		this.questions = {};
 		for (let i = 0, len = this.categories.length; i < len; i++) {
