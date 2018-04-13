@@ -168,8 +168,8 @@ class Game {
 	}
 
 	signups() {
-		this.say("Hosting a game of " + this.name + "! " + (this.freeJoin ? "(free join)" : "If you would like to play, use the command ``" + Config.commandCharacter + "join``."));
-		if (this.description) this.say("Description: " + this.description);
+		this.say("ScienceData is testing on a game of **" + this.name + "**! " + (this.freeJoin ? "ScienceGames" : "If you would like to play, use the command ``" + Config.commandCharacter + "join``."));
+		if (this.description) this.say(this.description);
 		if (this.onSignups) this.onSignups();
 		if (this.freeJoin) this.started = true;
 	}
