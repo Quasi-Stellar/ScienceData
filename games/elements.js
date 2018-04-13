@@ -7,7 +7,7 @@
 
 'use strict';
 const data = {"Elements": {}};
-const name = "elements";
+const name = "Elements";
 const elements = Storage.getDatabase('elements');
 for (let i in Tools.data.elements) {
 	let element = Tools.data.elements[i]
