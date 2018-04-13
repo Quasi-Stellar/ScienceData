@@ -11,7 +11,16 @@ const name = "Trivia";
 
 const data = {
 	"Elements": {}
+	"Sciences": {}
 };
+for (let i in Tools.data.sciences) {
+	let science = Tools.data.sciences[i]
+	if (!science.name) continue;
+	let desc = science.desc || science.shortDesc;
+	if (!desc) continue;
+	if (!(desc in data["Sciences"])) data["Sciences"][desc] = [];
+	data["Sciences"][desc].push(science.name);
+}
 
 for (let i in Tools.data.elements) {
 	let element = Tools.data.elements[i]
