@@ -267,7 +267,7 @@ let commands = {
 			hasPerms = true;
 		}
 		if (!hasPerms) return this.say(text + 'You must be at least Voice or higher to set the Scientist of the Day.');
-		if (targets.length < 4) return this.say(text + "Invalid arguments specified. The format is: __title__ | __lifetime__ | __profession__ | __description__.");
+		if (targets.length < 4) return this.say(text + "Invalid arguments specified. The format is: __title__ | __birth-death__ | __profession__ | __description__.");
 		let sotd = {
 			title: targets[0].trim(),
 			lifetime: targets [1],
@@ -323,7 +323,7 @@ let commands = {
 			targets.shift();
 		}
 		if (database.fotd) {
-			if (!typo && Date.now() - database.fotd.time < 61200000) return this.say(text + "Sorry, but at least 17 hours must have passed since the SOTD was last set in order to set it again!");
+			if (!typo && Date.now() - database.fotd.time < 61200000) return this.say(text + "Sorry, but at least 17 hours must have passed since the FOTD was last set in order to set it again!");
 		}
 		let hasPerms = false;
 		if (database.scribeShop) {
@@ -333,8 +333,8 @@ let commands = {
 		} else if (!(room instanceof Users.User) && user.hasRank(room, '+')) {
 			hasPerms = true;
 		}
-		if (!hasPerms) return this.say(text + 'You must be at least Voice or higher to set the Scientist of the Day.');
-		if (targets.length < 3) return this.say(text + "Invalid arguments specified. The format is: __title__ | __description__.");
+		if (!hasPerms) return this.say(text + 'You must be at least Voice or higher to set the Fact of the Day.');
+		if (targets.length < 3) return this.say(text + "Invalid arguments specified. The format is: __fac__ | __field of science___ | __description__.");
 		let fotd = {
 			fact: targets[0].trim(),
 			type: targets[1],
@@ -390,7 +390,7 @@ let commands = {
 			targets.shift();
 		}
 		if (database.stotd) {
-			if (!typo && Date.now() - database.stotd.time < 61200000) return this.say(text + "Sorry, but at least 17 hours must have passed since the SOTD was last set in order to set it again!");
+			if (!typo && Date.now() - database.stotd.time < 61200000) return this.say(text + "Sorry, but at least 17 hours must have passed since the STOTD was last set in order to set it again!");
 		}
 		let hasPerms = false;
 		if (database.scribeShop) {
