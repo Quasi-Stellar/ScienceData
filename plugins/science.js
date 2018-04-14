@@ -1,5 +1,5 @@
 /**
- * Writing commands
+ * Science commands
  * Cassius - https://github.com/sirDonovan/Cassius
  *
  * @license MIT license
@@ -27,7 +27,7 @@ let shopMerch = [
 		5,
 		"fossil, amount of fossils",
 		"groupchat-aurolux-science"],
-	
+	/* Editing format
 	["Take The Stage",
 		"For up to 2 minutes, we will set the room to modchat(+) and let you recite your poem or rap in the chat live! There is no greater way to receive feedback and recognition.",
 		"500 (Five Hundred)",
@@ -57,7 +57,7 @@ let shopMerch = [
 		"2,000 (Two Thousand)",
 		2000,
 		"antagonist. Follow the rest instuctions provided on purchase.",
-		"Writing"],
+		"Writing"], */
 	["Your Soul",
 		"???",
 		"1,000,000 (One Million)",
