@@ -110,6 +110,8 @@ class Tools {
 		this.loadTrainerClasses();
 		this.loadElements();
 		this.loadSciences();
+		this.loadScientists();
+		this.loadConstellations
 		this.loadedData = true;
 	}
 
@@ -180,6 +182,33 @@ class Tools {
 		}
 		if (sciences) this.data.sciences = sciences;
 	}
+	
+	loadScientists() {
+
+		let scientists;
+		try {
+			scientists = require(this.dataFilePath + 'scientists.js').Scientists;
+		} catch (e) {
+			if (e.code !== 'MODULE_NOT_FOUND') {
+				throw e;
+			}
+		}
+		if (scientists) this.data.scientists = scientists;
+	}
+	
+	loadConstellations() {
+
+		let constellations;
+		try {
+			constellations = require(this.dataFilePath + 'constellations.js').Constellations;
+		} catch (e) {
+			if (e.code !== 'MODULE_NOT_FOUND') {
+				throw e;
+			}
+		}
+		if (constellations) this.data.constellations = constellations;
+	}
+	
 	loadAbilities() {
 		if (this.loadedData) this.AbilityCache.clear();
 
