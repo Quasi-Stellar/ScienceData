@@ -11,13 +11,7 @@ const database = Storage.getDatabase('science');
 const MESSAGES_TIME_OUT = 7 * 24 * 60 * 60 * 1000;
 
 // sync database properties
-if (!database.potd) database.potd = [];
 if (!database.researchMerch) database.researchMerch = [];
-if (!database.myths) database.myths = {};
-if (!database.myths.db) {
-	database.myths.db = [];
-	database.myths.lastID = -1;
-}
 /* Shop Merchandise
  * 1st Element: Name
  * 2nd Element: Description
