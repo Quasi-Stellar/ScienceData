@@ -8,7 +8,7 @@
 'use strict';
 const data = {"Constellations": {}};
 const name = "Constellations";
-const elements = Storage.getDatabase('constellations');
+const constellations = Storage.getDatabase('constellations');
 for (let i in Tools.data.constellations) {
 	let constellation = Tools.data.constellations[i]
 	if (!constellation.name) continue;
