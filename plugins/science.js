@@ -328,7 +328,7 @@ let commands = {
 			hasPerms = true;
 		}
 		if (!hasPerms) return this.say(text + 'You must be at least Voice or higher to set the Fact of the Day.');
-		if (targets.length < 3) return this.say(text + "Invalid arguments specified. The format is: __fac__ | __field of science___ | __description__.");
+		if (targets.length < 3) return this.say(text + "Invalid arguments specified. The format is: __fact__ | __field of science__ | __description__.");
 		let fotd = {
 			fact: targets[0].trim(),
 			type: targets[1],
@@ -395,7 +395,7 @@ let commands = {
 			hasPerms = true;
 		}
 		if (!hasPerms) return this.say(text + 'You must be at least Voice or higher to set the Scientist of the Day.');
-		if (targets.length < 2) return this.say(text + "Invalid arguments specified. The format is: __star__ | __star type__ | .");
+		if (targets.length < 2) return this.say(text + "Invalid arguments specified. The format is: __star__ | __star type__ | __description__ .");
 		let stotd = {
 			title: targets[0].trim(),
 			type: targets[1],
