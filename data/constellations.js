@@ -286,7 +286,7 @@ exports.ModernConstellations = {
 				name: "Sagitta"
              },
 	  "Sagittarius": {
-	  			desc: "The archer constellation."
+	  			desc: "The archer constellation.",
 				name: "Sagittarius"
              },
 	  "Scorpius": {
