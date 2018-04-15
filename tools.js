@@ -200,7 +200,7 @@ class Tools {
 
 		let constellations;
 		try {
-			constellations = require(this.dataFilePath + 'constellations.js').Constellations;
+			constellations = require(this.dataFilePath + 'constellations.js').ModernConstellations;
 		} catch (e) {
 			if (e.code !== 'MODULE_NOT_FOUND') {
 				throw e;
