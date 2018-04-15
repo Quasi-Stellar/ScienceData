@@ -111,7 +111,7 @@ class Tools {
 		this.loadElements();
 		this.loadSciences();
 		this.loadScientists();
-		this.loadConstellations
+		this.loadConstellations();
 		this.loadedData = true;
 	}
 
