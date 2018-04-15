@@ -234,7 +234,7 @@ exports.ModernConstellations = {
 				name: "Octans"
              },
 	  "Ophiuchus": {
-	  			desc: "The constellation representing the 'serpent-bearer', __i.e.,__ a man grasping Serpens.",
+	  			desc: "The constellation representing the 'serpent-bearer', __i.e.,__ a man grasping Serpents.",
 				name: "Ophiuchus"
              },
   	  "Orion": {
