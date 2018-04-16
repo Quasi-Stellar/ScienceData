@@ -1,7 +1,7 @@
 'use strict';
 
 exports.ModernConstellations = {
-        "Andromeda": {
+	"Andromeda": {
                 desc: "The Princess of Ethiopia whom Perseus rescued",
                 name: "Andromeda"
               },
@@ -25,11 +25,11 @@ exports.ModernConstellations = {
                 desc: "The altar constellation.",
                 name: "Ara"
               },
-       "Aries": {
+	"Aries": {
                 desc: "The ram (the animal) constellation.",
                 name: "Aries"
               },
-       "Auriga": {
+	"Auriga": {
                 desc: "The constellation representing a charioteer.",
                 name: "Auriga"
               },
@@ -37,7 +37,7 @@ exports.ModernConstellations = {
                 desc: "The constellation representing a (specific) herdsman. (dieresis ignored)",
                 name: "Bootes"
               },
-        "Caelum": {
+	"Caelum": {
                 desc: "The chisel constellation.",
                 name: "Caelum"
               },
@@ -77,279 +77,279 @@ exports.ModernConstellations = {
                 desc: "The centaur constellation.",
                 name: "Centaurus"
               },
-       "Cepheus": {
+	"Cepheus": {
                 desc: "The constellation of the mythological king of Ethiopia who was the father of Andromeda.",
                 name: "Cephus"
              },
-       "Cetus": {
+	"Cetus": {
                 desc: "The whale or sea monster constellation.",
                 name: "Cetus"
              },
-      "Chamaeleon": {
+	"Chamaeleon": {
                 desc: "The constellation representing a chameleon.",
                 name: "Chamaeleon"
              },
-      "Circinus": {
+	"Circinus": {
                 desc: "The compass (the geometric tool) constellation.",
                 name: "Circinus"
              },
-      "Columba": {
+	"Columba": {
                 desc: "The constellation representing a dove.",
                 name: "Columba"
              },
-      "Coma Berenices": {
+	"Coma Berenices": {
                 desc: "The constellation representing the hair of Berenices II of Egypt.",
                 name: "Coma Berenices"
              },
-      "Corona Australis": {
+	"Corona Australis": {
                 desc: "The Southern Crown constellation.",
                 name: "Corona Australis"
              },
-      "Corona Borealis": {
+	"Corona Borealis": {
                 desc: "The Northern Crown constellation.",
                 name: "Corona Borealis"
              },
-      "Corvus": {
+	"Corvus": {
                 desc: "The constellation of a raven/crow (long story in Greek mythology).",
                 name: "Corvus"
-             },
-      "Crater": {
+	     },
+	"Crater": {
                 desc: "The cup constellation.",
                 name: "Crater"
-             },
-      "Crux": {
+	     },
+	"Crux": {
                 desc: "The constellation of the Southern Cross.",
                 name: "Crux"
              },
-      "Cygnus": {
+	"Cygnus": {
                 desc: "The swan or Northern Cross constellation.",
                 name: "Cygnus"
              },
-	  "Delphinus": {
+	"Delphinus": {
 		desc: "The dolphin constellation.",
 		name: "Delphinus"
              },
-	  "Dorado": {
+	"Dorado": {
 	  	desc: "The swordfish constellation, also known as Xiphias.",
 		name: "Dorado"
              },
-	  "Draco": {
+	"Draco": {
 		desc: "The dragon constellation.",
 		name: "Draco"
              },
-	  "Equuleus": {
+	"Equuleus": {
 	  	desc: "The constellation of a foal or pony.",
 		name: "Equuleus"
              },
-	  "Eridanus": {
+	"Eridanus": {
 	  	desc: "The eponymous constellation of a river.",
 		name: "Eridanus"
              },
-	  "Fornax": {
+	"Fornax": {
 	  	desc: "The constellation of a furnace or brazier.",
 		name: "Fornax"
              },
-	  "Gemini": {
+	"Gemini": {
 	  	desc: "The constellation of the twins.",
 		name: "Gemini"
              },
-	  "Grus": {
-	  	desc: "The constellation of a crane (the bird).",
+	"Grus": {
+	 	desc: "The constellation of a crane (the bird).",
 		name: "Grus"
              },
-	  "Hercules": {
+	"Hercules": {
 	  	desc: "The eponymous constellation of a son of Zeus known for his incredible strength and twelve labours.",
 		name: "Hercules"
              },
-	  "Horologium": {
+	"Horologium": {
 	  	desc: "The constellation of a pendulum clock.",
 		name: "Horologium"
              },
-	  "Hydra": {
+	"Hydra": {
 	  	desc: "The constellation of the many-headed snake killed by Heracles.",
 		name: "Hydra"
              },
-	  "Hydrus": {
+	"Hydrus": {
 	  	desc: "The constellation representing a water snake.",
 		name: "Hydrus"
              },
-	  "Indus": {
+	"Indus": {
 	  	desc: "The constellation of an Indian.",
 		name: "Indus"
              },
-	  "Lacerta": {
+	"Lacerta": {
 	  	desc: "The constellation of a lizard.",
 		name: "Lacerta"
              },
-	  "Leo": {
+	"Leo": {
 	  	desc: "The constellation of the lion, which represented the Nemean Lion for the Greeks.",
 		name: "Leo"
              },
-	  "Leo Minor": {
+	"Leo Minor": {
 	  	desc: "The constellation of a little or smaller lion.",
 		name: "Leo Minor"
              },
-	  "Lepus": {
+	"Lepus": {
 	  	desc: "The constellation of a hare, occasionally depicted being chased by Orion or his dogs.",
 		name: "Lepus",
              },
-	  "Libra": {
+	"Libra": {
 	  	desc: "The constellation of a balance.",
 		name: "Libra"
              },
-	  "Lupus": {
+	"Lupus": {
 	  	desc: "The wolf constellation.",
 		name: "Lupus"
              },
-	  "Lynx": {
+	"Lynx": {
 	  	desc: "The lynx constellation.",
 		name: "Lynx"
              },
-	  "Lyra": {
+	"Lyra": {
 	  	desc: "The constellation of Orpheus' lyre.",
 		name: "Lyra"
              },
-	  "Mensa": {
+	"Mensa": {
 	  	desc: "The table constellation, original representing the Table Mountain.",
 		name: "Mensa"
              },
-	  "Microscopium": {
+	"Microscopium": {
 	  	desc: "The constellation of a microscope.",
 		name: "Microscopium"
              },
-	  "Monoceros": {
+	"Monoceros": {
 	  	desc: "The unicorn constellation.",
 		name: "Monoceros"
              },
-	  "Musca": {
+	"Musca": {
 	  	desc: "The constellation representing a fly.",
 		name: "Musca"
              },
-	  "Norma": {
+	"Norma": {
 	  	desc: "The constellation representing a carpenter's square.",
 		name: "Norma"
              },
-	  "Octans": {
+	"Octans": {
 	  	desc: "The constellation representing an octant.",
 		name: "Octans"
              },
-	  "Ophiuchus": {
+	"Ophiuchus": {
 	  	desc: "The constellation representing the 'serpent-bearer', __i.e.,__ a man grasping Serpents.",
 		name: "Ophiuchus"
              },
-  	  "Orion": {
+  	"Orion": {
 	  	desc: "The constellation for a Greek hunter who hunted with Artemis.",
 		name: "Orion"
              },
-	  "Pavo": {
+	"Pavo": {
 	  	desc: "The constellation of a peacock.",
 		name: "Pavo"
              },
-	  "Pegasus": {
+	"Pegasus": {
 	  	desc: "The constellation of the mythological winged horse.",
 		name: "Pegasus"
              },
-	  "Perseus": {
+	"Perseus": {
 	  	desc: "The constellation of the Greek hero who rescued Andromeda.",
 		name: "Perseus"
              },
-	  "Phoenix": {
+	"Phoenix": {
 	  	desc: "The constellation of the mythical phoenix.",
 		name: "Phoenix"
              },
-	  "Pictor": {
+	"Pictor": {
 	  	desc: "The constellation of a painter's easel, its name shortened to 'painter.'",
 		name: "Pictor"
              },
-	  "Pisces": {
+	"Pisces": {
 	  	desc: "The constellation of (multiple) fish.",
 		name: "Pisces"
              },
-	  "Piscis Austrinis": {
+	"Piscis Austrinis": {
 	  	desc: "The 'southern fish' constellation.",
 		name: "Piscis Austrinis"
              },
-	  "Puppis": {
+	"Puppis": {
 	  	desc: "The constellation of the stern of the Argo.",
 		name: "Puppis"
              },
-	  "Pyxis": {
+	"Pyxis": {
 	  	desc: "The constellation of the Argonaughts' ship compass; also known as Malus.",
 		name: "Pyxis"
              },
-	  "Reticulum": {
+	"Reticulum": {
 	  	desc: "The constellation of a reticle (net of crosshairs).",
 		name: "Reticulum"
              },
-	  "Sagitta": {
+	"Sagitta": {
 	  	desc: "The arrow constellation",
 		name: "Sagitta"
              },
-	  "Sagittarius": {
+	"Sagittarius": {
 	  	desc: "The archer constellation.",
 		name: "Sagittarius"
              },
-	  "Scorpius": {
+	"Scorpius": {
 	  	desc: "The constellation of the scorpion which killed Orion.",
 		name: "Scorpius"
              },
-	  "Sculptor": {
+	"Sculptor": {
 	  	desc: "The constellation representing a sculptor.",
 		name: "Sculptor"
              },
-	  "Scutum": {
+	"Scutum": {
 	  	desc: "The constellation representing a shield.",
 		name: "Scutum"
              },
-	  "Serpens": {
+	"Serpens": {
 	  	desc: "The serpent or snake constellation.",
 		name: "Serpens"
              },
-	  "Sextans": {
+	"Sextans": {
 	  	desc: "The constellation representing a sextant.",
 		name: "Sextans"
              },
-	  "Taurus": {
+	"Taurus": {
 	  	desc: "The constellation of the bull, which is the bull Zeus turned into in Greek mythology.",
 		name: "Taurus"
              },
-	  "Telescopium": {
+	"Telescopium": {
 	  	desc: "The telescope constellation.",
 		name: "Telescopium"
              },
-	  "Triangulum": {
+	"Triangulum": {
 	  	desc: "The triangle constellation.",
 		name: "Triangulum"
              },
-	  "Triangulum Australe": {
+	"Triangulum Australe": {
 	  	desc: "The Southern Triangle constellation.",
 		name: "Triangulum Australe"
              },
-	  "Tucana": {
+	"Tucana": {
 	  	desc: "The constellation representing a toucan",
 		name: "Tucana"
              },
-	  "Ursa Major": {
+	"Ursa Major": {
 	  	desc: "The Great Bear constellation.",
 		name: "Ursa Major"
              },
-	  "Ursa Minor": {
+	"Ursa Minor": {
 	  	desc: "The Little Bear constellation.",
 		name: "Ursa Minor"
              },
-	  "Vela": {
+	"Vela": {
 	  	desc: "The constellation representing the sail of the Argo.",
 		name: "Vela"
              },
-	  "Virgo": {
+	"Virgo": {
 	  	desc: "The constellation representing a virgin.",
 		name: "Virgo"
              },
-	  "Volans": {
+	"Volans": {
 	  	desc: "The constellation representing a flying fish.",
 		name: "Volans"
              },
-	  "Vulpecula": {
+	"Vulpecula": {
 	  	desc: "The fox constellation; its name is Latin for 'little fox'.",
 		name: "Vulpecula"
              },
