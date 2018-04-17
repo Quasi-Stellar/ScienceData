@@ -78,13 +78,13 @@ exports.commands = {
 	"guess": "guess",
 	"g": "guess",
 };
-exports.aliases = ['constellations'];
+exports.aliases = ['constellation'];
 exports.variations = [
 	{
 		name: "Constellation Trivia",
 		aliases: ['Modern Constellations'],
 		variation: "Constellation Names",
-		variationAliases: ['constellation'],
+		variationAliases: ['modern constellation trivia'],
 	},
 ];
 exports.modes = ["Survival", "Team"];
