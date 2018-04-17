@@ -78,7 +78,7 @@ exports.commands = {
 	"guess": "guess",
 	"g": "guess",
 };
-exports.aliases = ['constellation'];
+exports.aliases = ['constellations'];
 exports.variations = [
 	{
 		name: "Constellation Trivia",
