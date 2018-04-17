@@ -82,9 +82,9 @@ exports.aliases = ['constellations'];
 exports.variations = [
 	{
 		name: "Constellation Trivia",
-		aliases: ['Constellations'],
+		aliases: ['Modern Constellations'],
 		variation: "Constellation Names",
-		variationAliases: ['constellations'],
+		variationAliases: ['constellation'],
 	},
 ];
 exports.modes = ["Survival", "Team"];
