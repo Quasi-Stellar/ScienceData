@@ -20,7 +20,7 @@ exports.server = '';
 exports.avatar = '120';
 
 // A guide for commands and features
-exports.guide = 'https://github.com/Aurolux/Science-Data/blob/master/README.md';
+exports.guide = 'https://github.com/Aurolux/ScienceData/blob/master/GUIDE.md';
 
 // Rooms that ScienceData will attempt to join after logging in
 // example: exports.rooms = ['room1', 'room2', 'room3'];
