@@ -163,7 +163,7 @@ let commands = {
 		if (!database.mail) return this.say('The message file is empty.');
 		if (target === 'all') {
 			database.mail = {};
-			Storage.exportDatabase('writing');
+			Storage.exportDatabase('science');
 			this.say('All messages have been cleared.');
 		} else if (target === 'time') {
 			for (let u in database.mail) {
@@ -172,13 +172,13 @@ let commands = {
 					if (messages[i].time < (Date.now() - MESSAGES_TIME_OUT)) database.mail[u].splice(database.mail[u].indexOf(messages[i]), 1);
 				}
 			}
-			Storage.exportDatabase('writing');
+			Storage.exportDatabase('science');
 			this.say('Messages older than one week have been cleared.');
 		} else {
 			let tarUser = Tools.toId(target);
 			if (!database.mail[tarUser]) return this.say(target + ' does not have any pending messages.');
 			delete database.mail[tarUser];
-			Storage.exportDatabase('writing');
+			Storage.exportDatabase('science');
 			this.say('Messages for ' + target + ' have been cleared.');
 		}
 	},
@@ -280,7 +280,7 @@ let commands = {
 		}
 		database.sotd = sotd;
 		database.sotdScientist.push(sotd);
-		Storage.exportDatabase('writing');
+		Storage.exportDatabase('science');
 		this.say(text + "The Scientist of the Day has been set to '" + targets[0] + "'!");
 		this.say("/modnote The Scientist of the Day was set to " + database.sotd.title + " by " + database.sotd.user + ".");
 		},
@@ -442,7 +442,7 @@ let commands = {
 				bal: amount,
 				totalEarned: amount,
 			});
-			Storage.exportDatabase('writing');
+			Storage.exportDatabase('science');
 			return this.say("A new Scribe Shop service has been created, and its very first account, " + targets[0].trim() + "'s, has had ``" + funds + "`` Moles added. And as a bonus for this event, we're throwing in an extra ``" + extraFunds + "`` Moles, absolutely free of charge! Now aren't we just so nice? c:");
 		}
 
@@ -454,7 +454,7 @@ let commands = {
 				database.researchMerch[i].bal += funds;
 				database.researchMerch[i].totalEarned += funds;
 				//Save changes.
-				Storage.exportDatabase('writing');
+				Storage.exportDatabase('science');
 				//Report changes.
 				return this.say("``" + funds + "`` Moles have been added to " + targets[0].trim() + "'s account! Current Balance: ``" + database.researchMerch[i].bal + "``");
 			}
@@ -465,7 +465,7 @@ let commands = {
 			bal: funds,
 			totalEarned: funds,
 		});
-		Storage.exportDatabase('writing');
+		Storage.exportDatabase('science');
 		//Report completion.
 		return this.say("New account for " + targets[0].trim() + " has been created and ``" + funds + "`` Moles have been added!");
 	},
@@ -807,7 +807,7 @@ let commands = {
 		default:
 			return this.say(text + "That item doesn't exist! Check that you're typing the right name, or contact a staff member if something's not working properly!");
 		}
-		Storage.exportDatabase('writing');
+		Storage.exportDatabase('science');
 		this.say(text + "Thank you for doing business at the Scribe Shop! Your new balance is: ``" + account.bal + "``!");
 	},
 	cookies: 'cookie',
@@ -839,7 +839,7 @@ let commands = {
 				if (database.researchMerch[i].masses === 1) {
 					if (action === "use" || action === "redeem") {
 						database.researchMerch[i].masses = 0;
-						Storage.exportDatabase('writing');
+						Storage.exportDatabase('science');
 						return this.say("Now redeeming... Transation complete! Feel free to summon the requested image. " + targets[0].trim() + " may now buy another copy of Inspire the Masses if they wish.");
 					} else {
 						return this.say("**Yes!** " + targets[0].trim() + " has the rights to Inspire The Masses!");
@@ -870,12 +870,12 @@ let commands = {
 					let customLimit = 300 - (28 + database.researchMerch[i].account.length);
 					if (newGreetingText.length > customLimit) return this.say("Sorry, but the length of your message is too long! Your personal limit is set to " + customLimit + " characters. Try shortening your greeting or using a shorter username for your account.");
 					database.researchMerch[i].greetings.public.text = newGreetingText;
-					Storage.exportDatabase('writing');
+					Storage.exportDatabase('science');
 					return this.say("Greeting updated: " + newGreetingText);
 				} else if (type === "private") {
 					if (!database.researchMerch[i].greetings.private) return this.say("You don't own a Private Greeting! QAQ");
 					database.researchMerch[i].greetings.private.text = newGreetingText;
-					Storage.exportDatabase('writing');
+					Storage.exportDatabase('science');
 					return this.say("Greeting updated: " + newGreetingText);
 				}
 			}
