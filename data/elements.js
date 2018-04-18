@@ -205,8 +205,8 @@ exports.ChemicalElements = {
                  name: "Antimony",
                  desc: "Symbol: Sb | Atomic Number: 51"
               },
-        "tellerium": {
-                 name: "Tellerium",
+        "tellurium": {
+                 name: "Tellurium",
                  desc: "Symbol: Te | Atomic Number: 52"
               },
         "iodine": {
