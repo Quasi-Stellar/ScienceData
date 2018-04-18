@@ -307,7 +307,7 @@ exports.ChemicalElements = {
               },
         "iridium": {
                  name: "Iridium",
-                 desc: "Symbol: Os | Atomic Number: 77"
+                 desc: "Symbol: Ir | Atomic Number: 77"
               },
         "platinum": {
                  name: "Platinum",
