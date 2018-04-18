@@ -11,7 +11,8 @@ const name = "Trivia";
 
 const data = {
 	"Elements": {},
-	"Sciences": {}
+	"Sciences": {},
+	"Constellations": {}
 };
 for (let i in Tools.data.sciences) {
 	let science = Tools.data.sciences[i]
@@ -20,6 +21,15 @@ for (let i in Tools.data.sciences) {
 	if (!desc) continue;
 	if (!(desc in data["Sciences"])) data["Sciences"][desc] = [];
 	data["Sciences"][desc].push(science.name);
+}
+
+for (let i in Tools.data.constellations) {
+	let constellation = Tools.data.constellations[i]
+	if (!constellation.name) continue;
+	let desc = constellation.desc || constellation.shortDesc;
+	if (!desc) continue;
+	if (!(desc in data["Constellations"])) data["Constellations"][desc] = [];
+	data["Constellations"][desc].push(constellation.name);
 }
 
 for (let i in Tools.data.elements) {
