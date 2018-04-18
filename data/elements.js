@@ -2,7 +2,7 @@
 
 exports.ChemicalElements = {
         "hydrogen": {
-                desc: "Symbol: H | Atomic Number: 1.",
+                desc: "Symbol: H | Atomic Number: 1",
                 name: "Hydrogen"
               },
         "helium": {
