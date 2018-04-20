@@ -306,7 +306,7 @@ let commands = {
 		}
 		if (Tools.toId(target) === 'check' || Tools.toId(target) === 'time') {
 			if (!database.fotd) return this.say(text + "There is no Fact of the Day to check!");
-			return this.say(text + "The Fact of the Day was last updated to **" + database.fotd.title + "** " + Tools.toDurationString(Date.now() - database.fotd.time) + " ago by " + database.fotd.user);
+			return this.say(text + "The Fact of the Day was last updated to **" + database.fotd.fact + "** " + Tools.toDurationString(Date.now() - database.fotd.time) + " ago by " + database.fotd.user);
 		}
 		let targets = target.split('|');
 		let typo = false;
