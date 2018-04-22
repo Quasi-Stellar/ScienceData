@@ -52,6 +52,15 @@ let commands = {
 		this.say("/hidetext " + target);
 		this.say("/unmute " + target);
 	},
+	invite: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		this.say("/forceroomvoice " + target);
+		this.say("/invite " + target);
+	},
+	demote: function (target, room, user) {
+		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		this.say("/roomdeauth " + target);
+	},
 	contest: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("The Science Spring Contest is taking a picture of a living organism and writing an analysis on it! For more information, go here: https://scienceps.weebly.com/2018-spring-contest.html");
