@@ -405,8 +405,8 @@ let commands = {
 			stotd.time = Date.now();
 			stotd.user = user.name;	
 		} else {
-			stotd.time = database.sotd.time;
-			stotd.user = database.sotd.user;
+			stotd.time = database.stotd.time;
+			stotd.user = database.stotd.user;
 		}
 		if (!database.stotdStar) {
 			database.stotdStar = [];
