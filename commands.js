@@ -43,7 +43,7 @@ let commands = {
 		this.say(Tools.sampleOne(roasts));
 	},
 	school: function (target, room, user) {
-		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
+		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
 		this.say("Please bring all school concerns to <<scholastic>>.");
 	},
 	warn: function (target, room, user) {
@@ -89,7 +89,7 @@ let commands = {
 	signups: 'game',
 	game: function (target, room, user) {
 		if (room instanceof Users.User) return;
-		if (!user.hasRank(room, '%')) return;
+		if (!user.hasRank(room, '+')) return;
 		if (!Config.games || !Config.games.includes(room.id)) return this.say("Games are not enabled for this room.");
 		let format = Games.getFormat(target);
 		if (!format || format.inheritOnly) return this.say("The game '" + target + "' was not found.");
