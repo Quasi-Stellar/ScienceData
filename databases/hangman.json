@@ -1,12 +1,14 @@
 {
-  "defaultRank": "+", 
-  "Astronomy": [{"Hint": "Solution"}], 
-  "Animalia": [{"Hint": "Solution"}], 
-  "Biology": [{"Hint": "Solution"}], 
-  "Botany": [{"Hint": "Solution"}], 
-  "Geology": [{"Hint": "Solution"}], 
-  "Meteorology": [{"Hint": "Solution"}], 
-  "Physics": [{"Hint": "Solution"}], 
-  "Scientists": [{"Hint": "Solution"}], 
-  "Technology": [{"Hint": "Solution"}]
+  "defaultRank": "+",
+  "hangmans": {
+    "Astronomy": [{"Hint": "Solution"}], 
+    "Animalia": [{"Hint": "Solution"}], 
+    "Biology": [{"Hint": "Solution"}], 
+    "Botany": [{"Hint": "Solution"}], 
+    "Geology": [{"Hint": "Solution"}], 
+    "Meteorology": [{"Hint": "Solution"}], 
+    "Physics": [{"Hint": "Solution"}], 
+    "Scientists": [{"Hint": "Solution"}], 
+    "Technology": [{"Hint": "Solution"}]
+  }
 }
