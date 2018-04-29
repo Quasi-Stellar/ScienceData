@@ -1,6 +1,7 @@
 {
   "defaultRank": "+",
   "hangmans": {
+    "Random": [{"Hint": "Solution"}], 
     "Astronomy": [{"Hint": "Solution"}], 
     "Animalia": [{"Hint": "Solution"}], 
     "Biology": [{"Hint": "Solution"}], 
