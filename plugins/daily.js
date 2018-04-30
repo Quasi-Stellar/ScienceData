@@ -1,6 +1,15 @@
+/**
+ * Science commands
+ * Cassius - https://github.com/sirDonovan/Cassius
+ * @author Aurolux
+ * @license MIT license
+ */
+
 'use strict';
 
 const database = Storage.getDatabase('science');
+const MESSAGES_TIME_OUT = 7 * 24 * 60 * 60 * 1000;
+let commands = {
 // Of the Day commands
 	// Scientist of the Day
 	'scientist': 'sotd',
