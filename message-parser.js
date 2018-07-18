@@ -48,7 +48,7 @@ class Context {
 	 */
 	sayHtml(message) {
 		if (this.room instanceof Users.User) return this.pmHtml(this.room, message);
-		this.room.say("!htmlbox " + message, true);
+		this.room.say("/addhtmlbox " + message, true);
 	}
 
 	/**
