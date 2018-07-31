@@ -38,14 +38,14 @@ let commands = {
 		this.say("/logout")
 	},
 	roast: function (target, user, room) {
-		if (target == "") let target = user.name;
+		if (target == "") this.say("You need to specify a user!");
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
 		let roasts = ["If i wanted to die, I would climb to the top of " + target + "'s ego and jump to their IQ", target + ", I was going to give you a nasty look but I see that you’ve already got one.", target + ", you always bring me so much joy. As soon as you leave the room.", target + ", some day you'll go far - and i really hope you stay there.", "To call " + target + " a donkey would be an insult to the donkey.", target + ", You're the reason the gene pool needs a lifeguard", target + "'s breath is so bad, their dentist treats them over the phone.", "I tried making " + target + " my password but my computer said it was too weak.", "If laughter is the best medicine, " + target + "'s face must be curing the world.", target + ", you remind me of Kurt Angle. You suck!", target + ', your presence here is as bad as __OM Room__\'s theme', target + ", you remind me of gold. You weigh a fuck ton.", target + ", your body looks like a kindergartners attempt to make a person out of playdoh", target + ", my mom asked me to take out the trash so what time should I pick you up?", "No, those __pants__ don't make " + target + " look fatter - how could they?", "If " + target + " is gonna be two-faced, why can't at least one of them be attractive?", "Accidents happen. LIKE YOU!", target + " is proof god has a sense of humor"];
 		this.say(Tools.sampleOne(roasts));
 	},
 	school: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
-		this.say("Please bring all school concerns to <<scholastic>>.");
+		this.say("Please bring all school concerns to play.pokemonshowdown.com/scholastic.");
 	},
 	warn: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
