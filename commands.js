@@ -54,7 +54,7 @@ let commands = {
 	},
 	img: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '%')) return;
-		this.sayHtml(`<img src="` + target + `style="width: 50%; height: 50% />`);
+		this.sayHtml("!showimage " + target + ", 50%, 50%");
 	},
 	contest: function (target, room, user) {
 		if (!(room instanceof Users.User) && !user.hasRank(room, '+')) return;
